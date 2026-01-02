@@ -1,9 +1,9 @@
 /*
- * Universal Responsive CSS - Flexible Version 2.0
- * Features: Initial Zoom-out capability & Smooth Horizontal Scroll
+ * Universal Responsive CSS - Absolute Freedom Version 3.0
+ * Features: Extreme Zoom-out (Pinch to Shrink) & Multi-Component Scrolling
  */
 
-/* ===== Base Resets & Zoom Support ===== */
+/* ===== Base Resets & Absolute Zoom Freedom ===== */
 *,
 *::before,
 *::after {
@@ -14,41 +14,45 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* إزالة القيود الإجبارية للسماح للمتصفح بتفعيل الزوم آوت الطبيعي */
+    /* السماح لمساحة العرض بالتمدد بحرية تامة */
     min-width: 100%;
+    overflow-x: visible !important;
+    position: relative;
+    /* التراجع عن أي كتم للتمرير قد يكون موجوداً في قوالب خارجية */
 }
 
-/* السماح للمتصفح بالتحكم في حجم النص وعدم فرضه بنسبة 100% */
+/* خاص بـ Safari والتحكم في حجم النص */
 html {
     -webkit-text-size-adjust: auto;
     -ms-text-size-adjust: auto;
 }
 
-/* ===== ROBUST & SCROLLABLE TABLES ===== */
+/* ===== ROBUST HORIZONTAL SCROLLING (Tables & Tabs) ===== */
 
-/* الحاوية هي السر: يجب تغليف كل جدول بـ div يحمل هذا الكلاس في ملف الـ HTML */
+/* الحاوية الموحدة للتمرير الأفقي للجداول والتبويبات وكل ما هو عريض */
 .table-container,
-.table-responsive {
+.table-responsive,
+.nav-tabs,
+.nav-pills,
+.tabs-navigation {
+    display: flex !important;
+    /* للتبويبات */
     display: block !important;
+    /* للجداول - المتصفح سيتجاهل الخاطئ منهما */
     width: 100% !important;
     overflow-x: auto !important;
-    /* تفعيل التمرير الأفقي */
     -webkit-overflow-scrolling: touch !important;
-    /* سلاسة اللمس في آيفون وأندرويد */
     margin-bottom: 20px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    background-color: #ffffff;
 }
 
-table {
+/* تخصيص الجداول داخل الحاوية */
+.table-container table,
+.table-responsive table {
     display: table !important;
-    border-collapse: collapse !important;
     width: 100% !important;
-    /* يتمدد ليملأ الحاوية */
-    min-width: 600px;
-    /* يضمن وجود مساحة تحتاج للتمرير على الجوال */
-    margin: 0 !important;
+    min-width: 700px;
+    /* لضمان التمرير على الشاشات الصغيرة */
+    border-collapse: collapse;
 }
 
 th,
@@ -57,7 +61,6 @@ td {
     text-align: right !important;
     border-bottom: 1px solid #e9ecef !important;
     white-space: nowrap !important;
-    /* يمنع انكسار السطور للحفاظ على شكل الجدول العلمي */
 }
 
 th {
@@ -65,53 +68,32 @@ th {
     color: white !important;
     position: sticky;
     top: 0;
-    /* يثبت الرأس عند التمرير الرأسي إن وجد */
 }
 
-/* ===== Mobile Adjustments (Screen width < 768px) ===== */
-@media screen and (max-width: 768px) {
-    body {
-        /* تقليل حجم الخط الأساسي قليلاً للسماح برؤية محتوى أكبر (إيحاء بالزوم آوت) */
-        font-size: 16px;
-        padding: 10px;
-        line-height: 1.6;
-    }
-
-    /* ضمان أن الصور لا تكسر حدود الصفحة */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-/* ===== TAB COMPONENT RESPONSIVENESS ===== */
-/* يدعم Bootstrap والتبويبات المخصصة */
+/* ===== TAB RESPONSIVENESS ===== */
 .nav-tabs,
-.nav-pills,
-.tabs-navigation {
-    display: flex !important;
+.nav-pills {
     flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 20px !important;
-    gap: 10px !important;
-    scrollbar-width: thin;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .nav-link,
-.tab,
-.tab-btn {
+.tab {
     white-space: nowrap !important;
     flex: 0 0 auto !important;
 }
 
-/* تحسين شكل شريط التمرير للتبويبات */
-.nav-tabs::-webkit-scrollbar {
-    height: 4px;
-}
+/* Mobile Adjustments (Screen width < 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 5px;
+    }
 
-.nav-tabs::-webkit-scrollbar-thumb {
-    background: #dee2e6;
-    border-radius: 10px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
