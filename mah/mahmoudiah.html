@@ -780,23 +780,41 @@
                                     const tempDiv = document.createElement('div');
                                     tempDiv.innerHTML = externalContent;
                                     const headerToRemove = tempDiv.querySelector('header');
-                                    const navToRemove = tempDiv.querySelector('.nav-tabs');
+                                    // nav preserved
                                     const footerToRemove = tempDiv.querySelector('footer');
                                     if (headerToRemove) headerToRemove.remove();
-                                    if (navToRemove) navToRemove.remove();
+                                    // nav preserved
                                     if (footerToRemove) footerToRemove.remove();
 
                                     // جعل جميع الأقسام مرئية (لأنها في الملف الأصلي مقسمة لتبويبات مخفية)
-                                    tempDiv.querySelectorAll('.tab-content').forEach(c => {
-                                        c.style.display = 'block';
-                                        c.classList.add('active'); // لضمان تطبيق الحركات
-                                    });
+                                    // contents hidden for tab logic
 
                                     contentDiv.innerHTML = tempDiv.innerHTML;
                                     loader.style.display = "none";
 
                                     // إعادة تفعيل حركات الظهور للمحتوى الجديد
-                                    if (typeof revealSections === 'function') revealSections();
+                                    
+  // إعادة تفعيل الألسنة للمحتوى الجديد
+ const newTabs = contentDiv.querySelectorAll('.tab');
+ const newTabContents = contentDiv.querySelectorAll('.tab-content');
+ 
+ newTabs.forEach(nT => {
+     nT.addEventListener('click', () => {
+         newTabs.forEach(t => t.classList.remove('active'));
+         newTabContents.forEach(c => {
+             c.classList.remove('active');
+             c.style.display = 'none';
+         });
+         nT.classList.add('active');
+         const tId = nT.getAttribute('data-tab');
+         const target = contentDiv.querySelector('#' + tId);
+         if (target) {
+             target.classList.add('active');
+             target.style.display = 'block';
+         }
+     });
+ });
+ if (typeof revealSections === 'function') revealSections();
                                 })
                                 .catch(error => {
                                     loader.innerHTML = "<p style='color:red;'>حدث خطأ أثناء تحميل المحتوى. تأكد من وجود ملف mahber.html</p>";
