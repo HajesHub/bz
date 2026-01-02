@@ -5,7 +5,9 @@
  */
 
 /* ===== Base Resets ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -20,16 +22,31 @@ img {
     height: auto;
 }
 
-/* ===== Responsive Tables ===== */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
+/* ===== Desktop Table Styles ===== */
 table {
     width: 100%;
     border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background: linear-gradient(135deg, #0d6efd, #3d8bfd);
+    color: white;
+    font-weight: 600;
+}
+
+tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
 }
 
 /* ===== Tablet Styles (max-width: 992px) ===== */
@@ -38,26 +55,22 @@ table {
         font-size: 17px;
         line-height: 1.9;
     }
-    
+
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.6rem; }
-    h3 { font-size: 1.4rem; }
-    
-    /* Wrap tables for horizontal scroll */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+
+    h1 {
+        font-size: 2rem;
     }
-    
-    th, td {
-        min-width: 120px;
-        padding: 12px 10px;
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
     }
 }
 
@@ -68,72 +81,110 @@ table {
         line-height: 2;
         padding: 10px;
     }
-    
+
     .container {
         padding-left: 15px;
         padding-right: 15px;
     }
-    
-    h1 { 
-        font-size: 1.75rem; 
+
+    h1 {
+        font-size: 1.75rem;
         line-height: 1.4;
     }
-    h2 { font-size: 1.5rem; }
-    h3 { font-size: 1.3rem; }
-    h4 { font-size: 1.15rem; }
-    
-    p, li {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.15rem;
+    }
+
+    p,
+    li {
         font-size: 1.1rem;
         line-height: 2;
     }
-    
+
     /* Cards and sections */
     .card {
         margin-bottom: 20px;
         padding: 15px !important;
     }
-    
+
     /* Flex adjustments */
     .d-flex {
         flex-wrap: wrap;
     }
-    
-    /* Grid adjustments */
-    .row {
-        margin-left: -10px;
-        margin-right: -10px;
-    }
-    
-    .col-md-6, .col-lg-4, .col-lg-6 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    /* Tables become scrollable cards */
-    table {
-        font-size: 0.95rem;
-    }
-    
-    th, td {
-        padding: 10px 8px;
-        min-width: 100px;
-    }
-    
+
     /* Reduce section spacing */
-    section, .mb-5 {
+    section,
+    .mb-5 {
         margin-bottom: 2rem !important;
     }
-    
+
     /* Navigation tabs */
     .nav-tabs .nav-link,
     .nav-tabs-custom .nav-link {
         padding: 10px 15px;
         font-size: 0.9rem;
     }
-    
+
     /* Stat numbers */
     .stat-number {
         font-size: 2.5rem !important;
+    }
+
+    /* ===== MOBILE TABLES - HORIZONTAL SCROLL ===== */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    table thead,
+    table tbody,
+    table tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    table thead {
+        display: table-header-group;
+    }
+
+    table tbody {
+        display: table-row-group;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        min-width: 120px;
+    }
+
+    /* Scroll indicator */
+    table::after {
+        content: '← اسحب للمزيد →';
+        display: block;
+        text-align: center;
+        padding: 8px;
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        color: #1565c0;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 0 0 8px 8px;
     }
 }
 
@@ -142,93 +193,68 @@ table {
     body {
         font-size: 16px;
     }
-    
+
     .container {
         padding-left: 12px;
         padding-right: 12px;
     }
-    
-    h1 { 
-        font-size: 1.5rem; 
+
+    h1 {
+        font-size: 1.5rem;
         word-wrap: break-word;
     }
-    h2 { font-size: 1.35rem; }
-    h3 { font-size: 1.2rem; }
-    
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
     /* Hero section adjustments */
     .hero-section {
         padding: 80px 0 50px !important;
     }
-    
+
     /* Badges */
     .badge {
         font-size: 0.8rem !important;
         padding: 6px 12px !important;
         margin-bottom: 5px;
     }
-    
+
     /* Statistics */
     .stat-number {
         font-size: 2rem !important;
     }
-    
+
     /* Buttons */
     .btn {
         padding: 10px 20px;
         font-size: 0.95rem;
     }
-    
-    /* Tables - vertical layout for very small screens */
-    table thead {
-        display: none;
-    }
-    
-    table, table tbody, table tr, table td {
-        display: block;
-        width: 100%;
-    }
-    
-    table tr {
-        margin-bottom: 15px;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 10px;
-        background: #fff;
-    }
-    
-    table td {
-        text-align: right;
+
+    /* Tables on small screens */
+    th,
+    td {
         padding: 8px 10px;
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        white-space: normal;
+        font-size: 0.85rem;
+        min-width: 100px;
     }
-    
-    table td:last-child {
-        border-bottom: none;
-    }
-    
-    table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-        color: #0d6efd;
-    }
-    
+
     /* Language switcher */
     .language-switcher {
         top: 5px !important;
         left: 5px !important;
         padding: 6px 10px !important;
     }
-    
+
     .lang-btn {
         padding: 5px 10px !important;
         font-size: 12px !important;
     }
-    
+
     /* Floating navigation */
     .floating-nav {
         transform: scale(0.85);
@@ -237,7 +263,8 @@ table {
 }
 
 /* ===== RTL Specific Adjustments ===== */
-[dir="rtl"] table td::before {
+[dir="rtl"] th,
+[dir="rtl"] td {
     text-align: right;
 }
 
@@ -246,18 +273,22 @@ table {
     body {
         font-size: 12pt;
     }
-    
+
     .language-switcher,
     .floating-nav,
     .watermark {
         display: none !important;
     }
-    
+
     table {
         display: table;
         page-break-inside: avoid;
     }
-    
+
+    table::after {
+        display: none;
+    }
+
     .card {
         break-inside: avoid;
     }
