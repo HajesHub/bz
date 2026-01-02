@@ -1,27 +1,29 @@
 /*
- * Universal Responsive CSS - Version 2.0
- * Absolute Freedom & Robust Tables
+ * Universal Responsive CSS - Robust Version
+ * Focused on compatibility, standard zoom, and smooth table scroll
  */
 
-/* ===== Viewport & Resets ===== */
+/* ===== Base Resets ===== */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Enable standard zooming by ensuring no restrictive overflows on the main containers */
 html {
     -webkit-text-size-adjust: 100%;
 }
 
-body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-/* ===== NON-FRAGMENTED TABLES ===== */
-/* This ensures tables stay as tables and scroll as a unit */
+/* ===== ROBUST TABLES ===== */
+/* Every table in our research papers should be scrollable on mobile */
 table {
     display: table !important;
     border-collapse: collapse !important;
@@ -30,56 +32,38 @@ table {
     margin: 20px 0 !important;
 }
 
-/* Scrollable wrapper logic */
-.table-container,
+th,
+td {
+    padding: 12px 15px !important;
+    text-align: right !important;
+    border-bottom: 1px solid #e9ecef !important;
+    white-space: nowrap !important;
+    /* Important for non-fragmented rows */
+}
+
+th {
+    background: #455a64 !important;
+    color: white !important;
+}
+
+/* Standard Wrapper for scrolling - ensures horizontal scroll works everywhere */
 .table-responsive,
-.tab-pane table {
+.tab-pane,
+.table-container {
     display: block !important;
     width: 100% !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
+    /* Smooth scroll on iOS */
+    margin-bottom: 1rem;
     border: 1px solid #dee2e6;
     border-radius: 8px;
 }
 
-th,
-td {
-    white-space: nowrap !important;
-    /* Prevent text wrapping inside cells */
-    padding: 12px 18px !important;
-    min-width: 150px;
-    /* Minimum width for columns to stay readable */
-    text-align: right !important;
-}
-
-/* Mobile Adjustments (max-width: 768px) */
+/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     body {
         font-size: 18px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    /* Ensure rows don't break */
-    tr {
-        display: table-row !important;
-    }
-
-    td,
-    th {
-        display: table-cell !important;
-    }
-
-    /* Scroll Indicator Overlay (Optional) */
-    .table-responsive::after {
-        content: '← اسحب للمزيد →';
-        display: block;
-        text-align: center;
-        background: #f8f9fa;
-        font-size: 0.8rem;
         padding: 5px;
-        border-top: 1px solid #ddd;
     }
 }
