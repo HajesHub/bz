@@ -1,35 +1,36 @@
 /* 
- * Universal Professional CSS v6.0
- * Fit-to-Screen Stability + Horizontal Scrollable Tabs & Tables
- * Preserves Absolute Zoom Freedom (Zoom-out)
+ * Universal Professional CSS v7.1 (The Golden Balance)
+ * Stability: overflow-x: hidden (No Wobble)
+ * Freedom: Zoom enabled + Horizontal Scroll for Tables/Tabs
  */
 
-/* ===== Base Stability & Zoom Freedom ===== */
+/* ===== Base Stability (The Anchor) ===== */
 html,
 body {
     margin: 0 !important;
     padding: 0 !important;
-    min-width: 100%;
-    /* Allowing overflow for zoom-out but containing children */
-    overflow-x: visible !important;
+    width: 100%;
+    max-width: 100%;
+    /* Stops the entire page from wobbling left/right */
+    overflow-x: hidden !important;
     position: relative !important;
     -webkit-text-size-adjust: 100%;
 }
 
-/* Container stability */
+/* ===== Protected Containers ===== */
 .container,
 .main-wrapper {
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    /* This prevents accidental horizontal jitter while allowing global zoom */
-    overflow-x: clip;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
 }
 
-/* ===== PROFESSIONAL HORIZONTAL TABS ===== */
-/* This forces vertical tabs to become horizontal scrollable strips */
+/* ===== INTERNAL SCROLLING (The Escape Valve) ===== */
+
+/* 1. Horizontal Tabs */
 .nav-tabs,
 .nav-pills,
 .tabs-navigation {
@@ -37,41 +38,34 @@ body {
     flex-wrap: nowrap !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 5px !important;
     margin-bottom: 20px !important;
     border-bottom: 1px solid #dee2e6 !important;
-    gap: 10px !important;
-}
-
-/* Hide scrollbar for a cleaner look but keep functionality */
-.nav-tabs::-webkit-scrollbar {
-    height: 4px;
-}
-
-.nav-tabs::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
+    gap: 8px !important;
+    /* Ensure the scrollbar doesn't trigger page wobble */
+    max-width: 100vw !important;
+    width: 100% !important;
 }
 
 .nav-link,
-.tab,
-.tab-btn {
-    white-space: nowrap !important;
+.tab {
     flex: 0 0 auto !important;
-    padding: 10px 20px !important;
-    border-radius: 8px !important;
+    /* Keep them in a row */
+    white-space: nowrap !important;
 }
 
-/* ===== ROBUST TABLE SCROLLING ===== */
+/* 2. Wide Tables */
 .table-container,
 .table-responsive,
 .tab-pane {
     display: block !important;
     width: 100% !important;
+    max-width: 100vw !important;
+    /* Critical for stability */
     overflow-x: auto !important;
+    /* Internal scroll */
     -webkit-overflow-scrolling: touch !important;
-    margin-bottom: 25px !important;
-    /* Background for better visibility of scrollable area */
+    margin-bottom: 30px !important;
     background: #fff;
     border-radius: 8px;
 }
@@ -79,8 +73,8 @@ body {
 table {
     display: table !important;
     width: 100% !important;
-    min-width: 800px;
-    /* Ensures there is something to scroll on mobile */
+    min-width: 900px !important;
+    /* Force width > screen */
     border-collapse: collapse !important;
 }
 
@@ -92,7 +86,16 @@ td {
     white-space: nowrap !important;
 }
 
-/* ===== GLOBAL IMAGE & COMPONENT WRAPPING ===== */
+/* Scroll Hint Style (Optional) */
+.table-container::after,
+.table-responsive::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+}
+
+/* ===== GLOBAL MEDIA/COMPONENT SAFETY ===== */
 img,
 iframe,
 video {
@@ -100,15 +103,17 @@ video {
     height: auto;
 }
 
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
+/* Ensure no element accidentally breaks the width */
+* {
+    max-width: 100%;
+}
 
-    /* Ensure the main container doesn't overflow */
-    .container {
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+/* Except elements that NEED to be wide (inside scroll containers) */
+.nav-tabs *,
+.table-container *,
+table,
+tr,
+td,
+th {
+    max-width: none;
 }
