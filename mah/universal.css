@@ -14,10 +14,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* إزالة width: 100% الإجبارية للسماح للمتصفح بتقدير الحجم وتفعيل الزوم آوت */
+    /* إزالة القيود الإجبارية للسماح للمتصفح بتفعيل الزوم آوت الطبيعي */
     min-width: 100%;
-    overflow-x: hidden;
-    /* يمنع اهتزاز الصفحة الكلي ويحصر التمرير داخل الجداول فقط */
 }
 
 /* السماح للمتصفح بالتحكم في حجم النص وعدم فرضه بنسبة 100% */
@@ -84,4 +82,36 @@ th {
         max-width: 100%;
         height: auto;
     }
+}
+
+/* ===== TAB COMPONENT RESPONSIVENESS ===== */
+/* يدعم Bootstrap والتبويبات المخصصة */
+.nav-tabs,
+.nav-pills,
+.tabs-navigation {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    gap: 10px !important;
+    scrollbar-width: thin;
+}
+
+.nav-link,
+.tab,
+.tab-btn {
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+}
+
+/* تحسين شكل شريط التمرير للتبويبات */
+.nav-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb {
+    background: #dee2e6;
+    border-radius: 10px;
 }
