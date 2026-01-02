@@ -38,7 +38,7 @@ body {
 .container {
     background-color: var(--light-bg);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-    overflow: visible !important;
+    /* freedom */;
 }
 
 header {
@@ -285,7 +285,7 @@ footer {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    overflow: visible !important;
+    /* freedom */;
     max-width: 100%;
     background: #000;
     border-radius: 8px;
@@ -452,7 +452,7 @@ footer {
 .image-card {
     background: #eaeff2;
     border-radius: 20px;
-    overflow: visible !important;
+    /* freedom */;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;

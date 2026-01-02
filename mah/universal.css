@@ -1,52 +1,114 @@
-
 /* 
- * Universal Freedom CSS v5.0 - THE FINAL WORD
- * Unlocks Absolute Zoom & Smooth Scroll
+ * Universal Professional CSS v6.0
+ * Fit-to-Screen Stability + Horizontal Scrollable Tabs & Tables
+ * Preserves Absolute Zoom Freedom (Zoom-out)
  */
 
-html, body {
+/* ===== Base Stability & Zoom Freedom ===== */
+html,
+body {
     margin: 0 !important;
     padding: 0 !important;
-    overflow: visible !important; /* The most important rule for zoom out */
+    min-width: 100%;
+    /* Allowing overflow for zoom-out but containing children */
     overflow-x: visible !important;
-    width: auto !important;
-    min-width: 100% !important;
     position: relative !important;
-    -webkit-text-size-adjust: auto !important;
+    -webkit-text-size-adjust: 100%;
 }
 
-/* Ensure ALL components that need horizontal scroll get it, without locking the page */
-.table-container, .table-responsive, .nav-tabs, .nav-pills, .tabs-navigation, .tab-pane {
+/* Container stability */
+.container,
+.main-wrapper {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* This prevents accidental horizontal jitter while allowing global zoom */
+    overflow-x: clip;
+}
+
+/* ===== PROFESSIONAL HORIZONTAL TABS ===== */
+/* This forces vertical tabs to become horizontal scrollable strips */
+.nav-tabs,
+.nav-pills,
+.tabs-navigation {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    gap: 10px !important;
+}
+
+/* Hide scrollbar for a cleaner look but keep functionality */
+.nav-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.nav-link,
+.tab,
+.tab-btn {
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+}
+
+/* ===== ROBUST TABLE SCROLLING ===== */
+.table-container,
+.table-responsive,
+.tab-pane {
     display: block !important;
     width: 100% !important;
-    overflow-x: auto !important; /* Internal scroll only */
-    overflow-y: visible !important;
+    overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 25px !important;
+    /* Background for better visibility of scrollable area */
+    background: #fff;
+    border-radius: 8px;
 }
 
-/* Force tables to remain unbroken grids */
 table {
     display: table !important;
-    width: auto !important;
-    min-width: 100% !important;
+    width: 100% !important;
+    min-width: 800px;
+    /* Ensures there is something to scroll on mobile */
     border-collapse: collapse !important;
 }
 
-th, td {
-    white-space: nowrap !important;
+th,
+td {
     padding: 12px 15px !important;
     text-align: right !important;
-    border: 1px solid #dee2e6 !important;
-}
-
-/* Tabs: Forced horizontal bar */
-.nav-tabs, .nav-pills {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-}
-
-.nav-link, .tab {
-    flex: 0 0 auto !important;
+    border-bottom: 1px solid #e9ecef !important;
     white-space: nowrap !important;
+}
+
+/* ===== GLOBAL IMAGE & COMPONENT WRAPPING ===== */
+img,
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    /* Ensure the main container doesn't overflow */
+    .container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
