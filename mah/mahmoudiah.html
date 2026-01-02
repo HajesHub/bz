@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير متكامل: دراسة جدوى مشروع المياه والزراعة - قطعة المحمودية</title>
+    <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #57cc99;
+            --accent-color: #22577a;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --border-color: #ddd;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark-text);
+            line-height: 1.5;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* شريط التحرير - سيتم إخفاؤه في PDF */
+        .editing-bar {
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .editing-bar button {
+            background: linear-gradient(135deg, #57cc99, #38a169);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            min-width: 120px;
+            justify-content: center;
+        }
+
+        .editing-bar button:hover {
+            background: linear-gradient(135deg, #38a169, #2f855a);
+            transform: translateY(-1px);
+        }
+
+        .container {
+            background-color: white;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .nav-tabs {
+            display: flex;
+            background-color: var(--light-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .tab:hover {
+            background-color: rgba(87, 204, 153, 0.1);
+        }
+
+        .tab.active {
+            border-bottom: 3px solid var(--secondary-color);
+            color: var(--primary-color);
+            background-color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--secondary-color);
+            font-size: 1.5rem;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            margin: 20px 0 12px;
+            font-size: 1.2rem;
+            page-break-after: avoid;
+        }
+
+        .summary-box {
+            background-color: #f0f9ff;
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            page-break-inside: avoid;
+        }
+
+        .highlight {
+            background-color: #fff9e6;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-right: 4px solid var(--warning-color);
+            page-break-inside: avoid;
+        }
+
+        .indicator-card {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background-color: white;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            border-right: 3px solid var(--secondary-color);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .indicator-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(87, 204, 153, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12px;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .indicator-content {
+            flex: 1;
+        }
+
+        .indicator-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 0.9rem;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: right;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .recommendation-box {
+            background-color: #e8f5e9;
+            padding: 18px;
+            border-radius: 6px;
+            margin: 18px 0;
+            border-right: 4px solid var(--success-color);
+            page-break-inside: avoid;
+        }
+
+        .recommendation-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .recommendation-number {
+            background-color: var(--success-color);
+            color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .production-table {
+            overflow-x: auto;
+        }
+
+        .financial-summary {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            page-break-inside: avoid;
+            gap: 10px;
+        }
+
+        .financial-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+            page-break-inside: avoid;
+        }
+
+        .financial-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .conclusion {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+            page-break-inside: avoid;
+        }
+
+        .conclusion h3 {
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: #666;
+            font-size: 0.85rem;
+            page-break-before: avoid;
+        }
+
+        p {
+            margin-bottom: 12px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* تحسينات للطباعة واستغلال المساحة */
+        @media print {
+            .editing-bar {
+                display: none !important;
+            }
+
+            body {
+                background-color: white;
+                padding: 0 !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+                font-size: 11pt;
+                line-height: 1.4;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 100%;
+            }
+
+            /* إخفاء تبويبات التنقل في الطباعة */
+            .nav-tabs {
+                display: none !important;
+            }
+
+            /* عرض جميع المحتويات في الطباعة */
+            .tab-content {
+                display: block !important;
+                padding: 10px 15px !important;
+                margin: 0 !important;
+                page-break-before: always;
+            }
+
+            /* تجنب بدء المحتوى الأول بصفحة جديدة */
+            .tab-content:first-of-type {
+                page-break-before: avoid;
+            }
+
+            /* تحسين الهوامش في الطباعة */
+            header {
+                padding: 15px !important;
+                margin-bottom: 10px !important;
+            }
+
+            h1,
+            h2,
+            h3 {
+                margin-top: 12px !important;
+                margin-bottom: 10px !important;
+                page-break-after: avoid;
+            }
+
+            .summary-box,
+            .recommendation-box,
+            .highlight,
+            .conclusion {
+                padding: 12px !important;
+                margin: 12px 0 !important;
+                page-break-inside: avoid;
+            }
+
+            .indicator-card {
+                padding: 10px !important;
+                margin-bottom: 10px !important;
+                page-break-inside: avoid;
+            }
+
+            table {
+                margin: 12px 0 !important;
+                font-size: 10pt !important;
+                page-break-inside: avoid;
+            }
+
+            th,
+            td {
+                padding: 8px 10px !important;
+            }
+
+            .financial-summary {
+                margin: 15px 0 !important;
+                gap: 8px;
+            }
+
+            .financial-card {
+                padding: 12px !important;
+                min-width: 150px !important;
+            }
+
+            .financial-value {
+                font-size: 1.5rem !important;
+            }
+
+            footer {
+                margin-top: 15px !important;
+                padding-top: 10px !important;
+                font-size: 9pt !important;
+            }
+
+            /* تحسين تقسيم الصفحات */
+            h2,
+            h3 {
+                page-break-after: avoid;
+            }
+
+            p,
+            ul,
+            ol {
+                orphans: 3;
+                widows: 3;
+            }
+
+            /* تجنب تقسيم الجداول بين صفحات */
+            table {
+                page-break-inside: avoid;
+            }
+
+            /* تجنب تقسيم القوائم */
+            ul,
+            ol {
+                page-break-inside: avoid;
+            }
+
+            /* تقليل المسافات الزائدة */
+            * {
+                margin-top: 0.2em !important;
+                margin-bottom: 0.2em !important;
+            }
+
+            /* تحسين عرض التواريخ */
+            .date-badge {
+                position: static;
+                display: inline-block;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        /* تحسينات للشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                text-align: center;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .tab.active {
+                border-bottom: 3px solid var(--secondary-color);
+            }
+
+            .financial-summary {
+                flex-direction: column;
+            }
+
+            .financial-card {
+                margin: 8px 0;
+                min-width: 100%;
+            }
+
+            .date-badge {
+                position: relative;
+                top: 0;
+                left: 0;
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+
+            .editing-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+
+            .editing-bar button {
+                width: 100%;
+                margin: 2px 0;
+            }
+
+            .tab-content {
+                padding: 15px;
+            }
+        }
+
+        /* تحسينات إضافية لاستغلال المساحة */
+        .compact-table {
+            font-size: 0.9em;
+        }
+
+        .compact-table th,
+        .compact-table td {
+            padding: 8px 10px;
+        }
+
+        .no-break {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .keep-together {
+            page-break-inside: avoid;
+        }
+
+        /* تقليل المسافات بين العناصر في حالة الطباعة */
+        @media print {
+            .section-spacing {
+                margin-top: 8px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .paragraph-spacing {
+                margin-bottom: 6px !important;
+            }
+
+            /* تجنب الفراغات الكبيرة في نهاية الصفحات */
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- شريط التحرير - سيتم إخفاؤه في PDF -->
+    <div class="editing-bar">
+        <button onclick="editor.enable()">✏️ تفعيل التحرير</button>
+        <button onclick="editor.disable()">🔒 إيقاف التحرير</button>
+        <button onclick="editor.save()">💾 حفظ كـ HTML</button>
+        <button onclick="editor.hideToolbar()">📄 إخفاء للطباعة</button>
+        <button onclick="editor.showToolbar()">👁️ إظهار الشريط</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="date-badge">15 نوفمبر 2025</div>
+            <h1>تقرير متكامل: دراسة جدوى مشروع المياه والزراعة</h1>
+            <div class="subtitle">قطعة "المحمودية" - وادي ناوان</div>
+        </header>
+
+        <div class="nav-tabs">
+            <div class="tab active" data-tab="water">🌊 احتمال نجاح مشروع حفر بئر</div>
+            <div class="tab" data-tab="agriculture">🌾 دراسة الإنتاج الزراعي</div>
+            <div class="tab" data-tab="summary">📊 الخلاصة النهائية</div>
+        </div>
+
+        <div class="tab-content active" id="water">
+            <h2>احتمالية وجود مياه جوفية في قطعة "المحمودية" – وادي ناوان</h2>
+
+            <div class="summary-box">
+                <h3>ملخص تنفيذي</h3>
+                <p>تشير القراءة الهيدرولوجية والجيولوجية لوادي ناوان إلى أن قطعة <strong>المحمودية</strong> تقع فوق
+                    امتداد رسوبي قادر على نقل المياه الجوفية من مناطق التغذية العلوية في الوادي نحو الجزء الذي تقع فيه
+                    القطعة، حتى لو لم يصل السيل إليها مباشرة. هذا النمط من انتقال المياه تحت السطح مثبت في معظم أودية
+                    تهامة، ويجعل من حفر بئر في المحمودية خياراً ذا <strong>احتمالية نجاح عالية</strong>.</p>
+            </div>
+
+            <h3>مسار المياه الجوفية تحت السطح – كيف تصل إلى المحمودية؟</h3>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">📊</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">الانحدار الهيدرولوجي (Hydraulic Gradient)</div>
+                    <p>المياه الجوفية تتحرك دائماً من المناطق المرتفعة رطوبياً (مناطق التغذية) نحو المناطق الأقل
+                        ارتفاعاً داخل الوادي. وبما أن المحمودية تقع في <strong>جزء منخفض نسبياً من الامتداد الطبيعي
+                            للوادي</strong>، فإن هذا يجعلها نقطة تجمع طبيعي لتدفق المياه الجوفية.</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">🔄</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">النقل الأفقي للمياه عبر الطبقات الحصوية والرملية</div>
+                    <p>طبقات الوادي مكوّنة من خليط رملي–حصوي عالي النفاذية. هذا النوع من الرواسب يسمح للمياه بالتحرك
+                        أفقياً تحت السطح لمسافات كبيرة، حتى في الأماكن التي لا يصلها السيل على السطح. المياه هنا "تتسرب"
+                        من أعلى الوادي، ثم تتحرك أفقياً ببطء نحو الأسفل... والمحمودية تقع ضمن هذا المسار.</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">💧</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">وجود خزان جوفي واحد ممتد تحت الوادي</div>
+                    <p>في معظم الأودية الرسوبية، يكون الخزان الجوفي مستمرًا تحت سطح الوادي، وليس مجزأً. هذا يعني أن أي
+                        نقطة داخل الامتداد الرسوبي — مثل المحمودية — يمكن أن تستفيد من التغذية التي تحدث أعلى الوادي،
+                        حتى إن لم يمر السيل فوقها مباشرة.</p>
+                </div>
+            </div>
+
+            <h3>لماذا تُعد المحمودية موقعاً واعداً بالذات؟</h3>
+
+            <table class="compact-table">
+                <tr>
+                    <th>الميزة</th>
+                    <th>الشرح</th>
+                </tr>
+                <tr>
+                    <td><strong>موقعها داخل الامتداد الطبيعي للمجرى الرسوبي</strong></td>
+                    <td>المحمودية ليست على طرف الوادي؛ بل داخل امتداده، وهذا مهم جداً. الموقع الوسطي يجعلها <strong>من
+                            مناطق التجميع الجوفي (Groundwater Collection Zone)</strong>.</td>
+                </tr>
+                <tr>
+                    <td><strong>تربة نفاذة قادرة على استلام المياه الجوفية المارة تحتها</strong></td>
+                    <td>التركيب المرصود في المحيط: رمال + حصى + كونغلوميرات، وهو نفس التكوين الذي يسمح للمياه الجوفية
+                        بالتحرك تحت سطح الأرض بسهولة.</td>
+                </tr>
+                <tr>
+                    <td><strong>محاذاة هيدرولوجية مع الآبار المنتجة القريبة</strong></td>
+                    <td>الآبار المجاورة في نفس خط الامتداد الرسوبي غالباً ما تشترك في نفس الطبقة الجوفية. النجاح في
+                        الآبار القريبة يعني أن المحمودية تقع على نفس المسار الجوفي — وهذا مؤشر قوي جداً.</td>
+                </tr>
+            </table>
+
+            <div class="recommendation-box keep-together">
+                <h3>التوصية المهنية</h3>
+                <p>استناداً إلى الانحدار الطبيعي للوادي، الامتداد الرسوبي المستمر، تحرك المياه الجوفية أفقياً نحو
+                    المناطق المنخفضة، الآبار المنتجة القريبة، ونوعية التربة في المحيط، فإن احتمالية نجاح حفر بئر
+                    ارتوازية في <strong>قطعة المحمودية</strong> تعتبر <strong>مرتفعة علمياً وميدانيًا</strong>.</p>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-number">1</div>
+                    <div>إجراء مسح جيوفيزيائي إلزامي لتحديد نقطة الحفر بدقة. هذه الخطوة ضرورية أساسية قبل أي حفر.</div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-number">2</div>
+                    <div>الاستعداد لحفر أعماق متوسطة إلى عميقة لضمان الوصول للطبقة الجوفية الأساسية.</div>
+                </div>
+
+                <div class="recommendation-item">
+                    <div class="recommendation-number">3</div>
+                    <div>عدم الاعتماد على ملاحظة السيل السطحي في تقييم المنطقة — لأن التغذية الجوفية أهم وأقوى.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="agriculture">
+            <h2>دراسة الإنتاج الزراعي - دورة الذرة الرفيعة العلفية</h2>
+
+            <div class="summary-box">
+                <h3>نظرة عامة</h3>
+                <p>يغطي هذا الجدول دورة زراعية مكثفة لمدة <strong>530 يوماً (سنة و7 أشهر تقريباً)</strong>، بما في ذلك
+                    فترات النمو والتحضير والتوقف. يتم خلال هذه الفترة إنتاج الذرة الرفيعة العلفية عبر <strong>8
+                        حشات</strong> خلال موسمين.</p>
+            </div>
+
+            <h3>الجدول الزمني للإنتاج</h3>
+
+            <div class="production-table">
+                <table class="compact-table">
+                    <tr>
+                        <th>رقم العملية</th>
+                        <th>المرحلة</th>
+                        <th>النشاط</th>
+                        <th>المدة (يوم)</th>
+                        <th>اليوم التراكمي</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>الموسم الأول (البداية)</td>
+                        <td>تحضير التربة والزراعة</td>
+                        <td>10</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
+                        <td>55</td>
+                        <td>65</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>الحشة الأولى</td>
+                        <td>الحشة الأولى + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>-</td>
+                        <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
+                        <td>55</td>
+                        <td>125</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>الحشة الثانية</td>
+                        <td>الحشة الثانية + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>130</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>-</td>
+                        <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
+                        <td>55</td>
+                        <td>185</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>الحشة الثالثة</td>
+                        <td>الحشة الثالثة + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>190</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>-</td>
+                        <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
+                        <td>55</td>
+                        <td>245</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>الحشة الرابعة</td>
+                        <td>الحشة الرابعة + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>فترة التوقف والإراحة</td>
+                        <td>إزالة بقايا الجذور + تهيئة التربية</td>
+                        <td>30</td>
+                        <td>280</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>الموسم الثاني (البداية)</td>
+                        <td>تحضير التربة والزراعة</td>
+                        <td>10</td>
+                        <td>290</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>-</td>
+                        <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
+                        <td>55</td>
+                        <td>345</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>الحشة الخامسة</td>
+                        <td>الحشة الأولى للموسم الثاني + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>-</td>
+                        <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
+                        <td>55</td>
+                        <td>405</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>الحشة السادسة</td>
+                        <td>الحشة الثانية للموسم الثاني + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>410</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>-</td>
+                        <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
+                        <td>55</td>
+                        <td>465</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>الحشة السابعة</td>
+                        <td>الحشة الثالثة للموسم الثاني + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>470</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>-</td>
+                        <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
+                        <td>55</td>
+                        <td>525</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>الحشة الثامنة</td>
+                        <td>الحشة الرابعة للموسم الثاني + تعبئة بالات</td>
+                        <td>5</td>
+                        <td>530</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>التوقعات المالية والإنتاجية</h3>
+
+            <div class="financial-summary keep-together">
+                <div class="financial-card">
+                    <div>الإجمالي للحصاد</div>
+                    <div class="financial-value">8 حشات</div>
+                    <div>خلال موسمين</div>
+                </div>
+
+                <div class="financial-card">
+                    <div>الإنتاج الإجمالي</div>
+                    <div class="financial-value">400 طن</div>
+                    <div>وزن أخضر</div>
+                </div>
+
+                <div class="financial-card">
+                    <div>الإيراد المتوقع</div>
+                    <div class="financial-value">300,000 ريال</div>
+                    <div>خلال سنة و7 أشهر</div>
+                </div>
+            </div>
+
+            <table class="compact-table">
+                <tr>
+                    <th>البند</th>
+                    <th>الموسم الأول</th>
+                    <th>الموسم الثاني</th>
+                    <th>الإجمالي للموسمين</th>
+                </tr>
+                <tr>
+                    <td><strong>عدد الحشات</strong></td>
+                    <td>4 حشات</td>
+                    <td>4 حشات</td>
+                    <td><strong>8 حشات</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>إنتاج الحشة الواحدة</strong></td>
+                    <td>50 طناً</td>
+                    <td>50 طناً</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><strong>الإنتاج الموسمي الإجمالي</strong></td>
+                    <td>200 طن</td>
+                    <td>200 طن</td>
+                    <td><strong>400 طن</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>وزن البالة المعبأة</strong></td>
+                    <td>20 كجم</td>
+                    <td>20 كجم</td>
+                    <td>20 كجم</td>
+                </tr>
+                <tr>
+                    <td><strong>عدد البالات الإجمالي/الموسم</strong></td>
+                    <td>10,000 بالة</td>
+                    <td>10,000 بالة</td>
+                    <td><strong>20,000 بالة</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>سعر البالة الواحدة (التقديري)</strong></td>
+                    <td>15 ريالاً</td>
+                    <td>15 ريالاً</td>
+                    <td>15 ريالاً</td>
+                </tr>
+                <tr>
+                    <td><strong>الإيراد الإجمالي/الموسم</strong></td>
+                    <td><strong>150,000 ريال</strong></td>
+                    <td><strong>150,000 ريال</strong></td>
+                    <td><strong>300,000 ريال</strong></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-content" id="summary">
+            <h2>الخلاصة النهائية والتكامل بين المشروعين</h2>
+
+            <div class="conclusion keep-together">
+                <h3>النتيجة الشاملة</h3>
+                <p>بناءً على التحليل الهيدروجيولوجي والدراسة الزراعية، فإن مشروع قطعة <strong>المحمودية</strong> يظهر
+                    إمكانات عالية للنجاح على المستويين:</p>
+            </div>
+
+            <h3>📊 تقييم احتمالية نجاح حفر البئر</h3>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">✅</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">مؤشرات إيجابية قوية</div>
+                    <p>موقع المحمودية داخل الامتداد الرسوبي الطبيعي للوادي، ووجود خزان جوفي ممتد، والتكوين الأرضي النفاذ
+                        (رمال + حصى) جميعها عوامل تدعم احتمالية عالية لنجاح حفر البئر.</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">💡</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">التوصية الأساسية</div>
+                    <p>ضرورة إجراء مسح جيوفيزيائي قبل الحفر لتحديد نقطة الحفر الدقيقة والعمق المتوقع، مما يزيد من فرص
+                        النجاح ويقلل المخاطر.</p>
+                </div>
+            </div>
+
+            <h3>📈 الجدوى الاقتصادية للمشروع الزراعي</h3>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">💰</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">الإيرادات المتوقعة</div>
+                    <p>يمكن تحقيق إيرادات تصل إلى <strong>300,000 ريال</strong> خلال سنة و7 أشهر عبر دورة مكثفة للذرة
+                        الرفيعة العلفية (8 حشات، 400 طن إنتاج).</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">🔄</div>
+                <div class="indicator-content">
+                    <div class="indicator-title">التكامل بين المشروعين</div>
+                    <p>توفر المياه الجوفية مصدر ري مستدام يدعم الجدوى الاقتصادية للمشروع الزراعي. نجاح البئر يعني تأمين
+                        مصدر مائي دائم للري، مما يضمن استمرارية الإنتاج الزراعي.</p>
+                </div>
+            </div>
+
+            <div class="highlight keep-together">
+                <h3>الخطوات التوصية التنفيذية</h3>
+                <ol style="padding-right: 20px; margin-top: 10px;">
+                    <li style="margin-bottom: 8px;"><strong>المرحلة الأولى:</strong> إجراء المسح الجيوفيزيائي لتحديد
+                        نقطة الحفر المثلى.</li>
+                    <li style="margin-bottom: 8px;"><strong>المرحلة الثانية:</strong> حفر البئر والاختبار لضمان تدفق
+                        المياه وجودتها.</li>
+                    <li style="margin-bottom: 8px;"><strong>المرحلة الثالثة:</strong> تهيئة الأرض للزراعة وبدء الدورة
+                        الزراعية حسب الجدول الزمني.</li>
+                    <li><strong>المرحلة الرابعة:</strong> المتابعة الدورية للإنتاج ومراقبة منسوب المياه في البئر.</li>
+                </ol>
+            </div>
+
+            <div class="recommendation-box keep-together">
+                <h3>الخلاصة النهائية</h3>
+                <p>مشروع قطعة <strong>المحمودية</strong> يمثل فرصة استثمارية متكاملة، حيث تدعم الدراسة الهيدروجيولوجية
+                    احتمالية عالية لنجاح حفر البئر، بينما تظهر الدراسة الزراعية إمكانية تحقيق عوائد اقتصادية مجدية. نجاح
+                    المشروع يعتمد على التنفيذ المنهجي بدءاً بالمسح الجيوفيزيائي، ثم الحفر، ثم تنفيذ الخطة الزراعية.</p>
+                <p style="margin-top: 12px; font-weight: bold; color: var(--primary-color);">حفر البئر هنا خطوة منطقية
+                    ومدعومة علمياً... وفرصة كبيرة للحصول على مصدر مائي دائم ودعم الإنتاج الزراعي المجدي اقتصادياً.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>تم إعداد هذا التقرير بناءً على: التقرير الاستبشاري الهيدروجيولوجي (15 نوفمبر 2025) ودراسة الجدوى الزراعية
+                والإنتاجية.</p>
+            <p style="margin-top: 10px;">© 2025 - تقرير متكامل لدراسة جدوى مشروع المياه والزراعة</p>
+        </footer>
+    </div>
+
+    <script>
+        // تعريف كائن editor مع جميع الوظائف المطلوبة
+        window.editor = {
+            enable: function () {
+                document.querySelectorAll('.editing-bar button').forEach(btn => {
+                    btn.disabled = false;
+                });
+                alert('تم تفعيل التحرير - يمكنك الآن استخدام أزرار التحرير');
+            },
+            disable: function () {
+                document.querySelectorAll('.editing-bar button').forEach(btn => {
+                    btn.disabled = true;
+                });
+                alert('تم إيقاف التحرير - الأزرار غير مفعلة الآن');
+            },
+            save: function () {
+                // حفظ كـ HTML
+                const htmlContent = document.documentElement.outerHTML;
+                const blob = new Blob([htmlContent], { type: 'text/html' });
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'تقرير_المحمودية_معدل.html';
+                a.click();
+                alert('تم حفظ الملف كـ HTML');
+            },
+            hideToolbar: function () {
+                // إخفاء شريط التحرير
+                const editingBar = document.querySelector('.editing-bar');
+                if (editingBar) {
+                    editingBar.style.display = 'none';
+                }
+                // عند الإخفاء للطباعة، نعرض جميع المحتويات
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'block';
+                });
+                document.querySelector('.nav-tabs').style.display = 'none';
+                alert('تم إخفاء شريط التحرير وتبويبات التنقل - جاهز للطباعة/التصدير');
+            },
+            showToolbar: function () {
+                // إظهار شريط التحرير
+                const editingBar = document.querySelector('.editing-bar');
+                if (editingBar) {
+                    editingBar.style.display = 'flex';
+                }
+                // إعادة تبويبات التنقل
+                document.querySelector('.nav-tabs').style.display = 'flex';
+                alert('تم إظهار شريط التحرير وتبويبات التنقل');
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // إزالة النشاط من جميع الألسنة والمحتويات
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // إضافة النشاط لللسنة والمحتوى المحدد
+                    tab.classList.add('active');
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
