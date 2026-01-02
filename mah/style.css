@@ -590,3 +590,46 @@ footer {
         font-size: 1.4rem;
     }
 }
+
+/* ===== MOBILE TABLE SCROLL FIX ===== */
+@media (max-width: 768px) {
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: scroll !important;
+        -webkit-overflow-scrolling: touch !important;
+        border: 2px solid #dee2e6 !important;
+        border-radius: 10px !important;
+        margin: 20px 0 !important;
+    }
+    
+    table thead,
+    table tbody {
+        display: table !important;
+        width: 100% !important;
+    }
+    
+    table tr {
+        display: table-row !important;
+    }
+    
+    th, td {
+        display: table-cell !important;
+        white-space: nowrap !important;
+        padding: 10px 15px !important;
+        min-width: 120px !important;
+    }
+    
+    /* Scroll hint */
+    .tab-content table::before {
+        content: '← اسحب الجدول للمزيد →' !important;
+        display: block !important;
+        text-align: center !important;
+        padding: 10px !important;
+        background: #e3f2fd !important;
+        color: #1565c0 !important;
+        font-weight: bold !important;
+        border-radius: 10px 10px 0 0 !important;
+        margin-bottom: -2px !important;
+    }
+}
