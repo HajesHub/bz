@@ -1,99 +1,53 @@
-/*
- * Universal Responsive CSS - Absolute Freedom Version 3.0
- * Features: Extreme Zoom-out (Pinch to Shrink) & Multi-Component Scrolling
+
+/* 
+ * Universal Freedom CSS v4.0 - FINAL EMERGENCY VERSION
+ * Forces Absolute Zoom Out and Table Scrolling
  */
 
-/* ===== Base Resets & Absolute Zoom Freedom ===== */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    /* السماح لمساحة العرض بالتمدد بحرية تامة */
-    min-width: 100%;
+html, body {
+    overflow: visible !important;
     overflow-x: visible !important;
-    position: relative;
-    /* التراجع عن أي كتم للتمرير قد يكون موجوداً في قوالب خارجية */
+    width: auto !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
 }
 
-/* خاص بـ Safari والتحكم في حجم النص */
-html {
-    -webkit-text-size-adjust: auto;
-    -ms-text-size-adjust: auto;
-}
-
-/* ===== ROBUST HORIZONTAL SCROLLING (Tables & Tabs) ===== */
-
-/* الحاوية الموحدة للتمرير الأفقي للجداول والتبويبات وكل ما هو عريض */
-.table-container,
-.table-responsive,
-.nav-tabs,
-.nav-pills,
-.tabs-navigation {
-    display: flex !important;
-    /* للتبويبات */
+/* Ensure all tables and tabs are scrollable and don't fragment */
+.table-container, .table-responsive, .nav-tabs, .nav-pills, .tabs-navigation, .tab-pane {
     display: block !important;
-    /* للجداول - المتصفح سيتجاهل الخاطئ منهما */
     width: 100% !important;
     overflow-x: auto !important;
+    overflow-y: visible !important;
     -webkit-overflow-scrolling: touch !important;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+    position: relative !important;
 }
 
-/* تخصيص الجداول داخل الحاوية */
-.table-container table,
-.table-responsive table {
+table {
     display: table !important;
     width: 100% !important;
-    min-width: 700px;
-    /* لضمان التمرير على الشاشات الصغيرة */
-    border-collapse: collapse;
+    min-width: 800px !important; /* Forces scroll incentive */
+    border-collapse: collapse !important;
 }
 
-th,
-td {
+th, td {
+    white-space: nowrap !important;
     padding: 12px 15px !important;
     text-align: right !important;
-    border-bottom: 1px solid #e9ecef !important;
-    white-space: nowrap !important;
+    border: 1px solid #dee2e6 !important;
 }
 
-th {
-    background: #455a64 !important;
-    color: white !important;
-    position: sticky;
-    top: 0;
-}
-
-/* ===== TAB RESPONSIVENESS ===== */
-.nav-tabs,
-.nav-pills {
+/* Tab specific - Horizontal scroll */
+.nav-tabs, .nav-pills {
+    display: flex !important;
     flex-wrap: nowrap !important;
-    gap: 10px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #dee2e6;
+    overflow-x: auto !important;
+    padding: 10px 0 !important;
 }
 
-.nav-link,
-.tab {
-    white-space: nowrap !important;
+.nav-link, .tab {
     flex: 0 0 auto !important;
-}
-
-/* Mobile Adjustments (Screen width < 768px) */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 5px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+    white-space: nowrap !important;
 }
