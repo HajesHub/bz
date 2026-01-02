@@ -1,9 +1,9 @@
 /*
- * Universal Responsive CSS - Robust Version
- * Focused on compatibility, standard zoom, and smooth table scroll
+ * Universal Responsive CSS - Flexible Version 2.0
+ * Features: Initial Zoom-out capability & Smooth Horizontal Scroll
  */
 
-/* ===== Base Resets ===== */
+/* ===== Base Resets & Zoom Support ===== */
 *,
 *::before,
 *::after {
@@ -14,22 +14,43 @@ html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
+    /* إزالة width: 100% الإجبارية للسماح للمتصفح بتقدير الحجم وتفعيل الزوم آوت */
+    min-width: 100%;
+    overflow-x: hidden;
+    /* يمنع اهتزاز الصفحة الكلي ويحصر التمرير داخل الجداول فقط */
 }
 
-/* Enable standard zooming by ensuring no restrictive overflows on the main containers */
+/* السماح للمتصفح بالتحكم في حجم النص وعدم فرضه بنسبة 100% */
 html {
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: auto;
+    -ms-text-size-adjust: auto;
 }
 
-/* ===== ROBUST TABLES ===== */
-/* Every table in our research papers should be scrollable on mobile */
+/* ===== ROBUST & SCROLLABLE TABLES ===== */
+
+/* الحاوية هي السر: يجب تغليف كل جدول بـ div يحمل هذا الكلاس في ملف الـ HTML */
+.table-container,
+.table-responsive {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    /* تفعيل التمرير الأفقي */
+    -webkit-overflow-scrolling: touch !important;
+    /* سلاسة اللمس في آيفون وأندرويد */
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
 table {
     display: table !important;
     border-collapse: collapse !important;
-    width: auto !important;
-    min-width: 100% !important;
-    margin: 20px 0 !important;
+    width: 100% !important;
+    /* يتمدد ليملأ الحاوية */
+    min-width: 600px;
+    /* يضمن وجود مساحة تحتاج للتمرير على الجوال */
+    margin: 0 !important;
 }
 
 th,
@@ -38,32 +59,29 @@ td {
     text-align: right !important;
     border-bottom: 1px solid #e9ecef !important;
     white-space: nowrap !important;
-    /* Important for non-fragmented rows */
+    /* يمنع انكسار السطور للحفاظ على شكل الجدول العلمي */
 }
 
 th {
     background: #455a64 !important;
     color: white !important;
+    position: sticky;
+    top: 0;
+    /* يثبت الرأس عند التمرير الرأسي إن وجد */
 }
 
-/* Standard Wrapper for scrolling - ensures horizontal scroll works everywhere */
-.table-responsive,
-.tab-pane,
-.table-container {
-    display: block !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    /* Smooth scroll on iOS */
-    margin-bottom: 1rem;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-}
-
-/* Mobile Adjustments */
+/* ===== Mobile Adjustments (Screen width < 768px) ===== */
 @media screen and (max-width: 768px) {
     body {
-        font-size: 18px;
-        padding: 5px;
+        /* تقليل حجم الخط الأساسي قليلاً للسماح برؤية محتوى أكبر (إيحاء بالزوم آوت) */
+        font-size: 16px;
+        padding: 10px;
+        line-height: 1.6;
+    }
+
+    /* ضمان أن الصور لا تكسر حدود الصفحة */
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
