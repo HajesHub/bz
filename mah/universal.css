@@ -1,7 +1,6 @@
 /*
- * Universal Responsive CSS
- * مكتب هاجس للأبحاث الاستراتيجية
- * ملف موحد للتوافق مع الأجهزة المحمولة
+ * Universal Responsive CSS - Robust Version
+ * Focused on compatibility, standard zoom, and smooth table scroll
  */
 
 /* ===== Base Resets ===== */
@@ -11,285 +10,60 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Enable standard zooming by ensuring no restrictive overflows on the main containers */
 html {
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
 }
 
-/* ===== Responsive Images ===== */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ===== Desktop Table Styles ===== */
+/* ===== ROBUST TABLES ===== */
+/* Every table in our research papers should be scrollable on mobile */
 table {
-    width: 100%;
-    border-collapse: collapse;
+    display: table !important;
+    border-collapse: collapse !important;
+    width: auto !important;
+    min-width: 100% !important;
+    margin: 20px 0 !important;
 }
 
 th,
 td {
-    padding: 12px 15px;
-    text-align: right;
-    border-bottom: 1px solid #e9ecef;
+    padding: 12px 15px !important;
+    text-align: right !important;
+    border-bottom: 1px solid #e9ecef !important;
+    white-space: nowrap !important;
+    /* Important for non-fragmented rows */
 }
 
 th {
-    background: linear-gradient(135deg, #0d6efd, #3d8bfd);
-    color: white;
-    font-weight: 600;
+    background: #455a64 !important;
+    color: white !important;
 }
 
-tbody tr:hover {
-    background-color: rgba(13, 110, 253, 0.05);
+/* Standard Wrapper for scrolling - ensures horizontal scroll works everywhere */
+.table-responsive,
+.tab-pane,
+.table-container {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    /* Smooth scroll on iOS */
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-/* ===== Tablet Styles (max-width: 992px) ===== */
-@media screen and (max-width: 992px) {
-    body {
-        font-size: 17px;
-        line-height: 1.9;
-    }
-
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-}
-
-/* ===== Mobile Styles (max-width: 768px) ===== */
+/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     body {
         font-size: 18px;
-        line-height: 2;
-        padding: 10px;
-    }
-
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-        line-height: 1.4;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-    }
-
-    h4 {
-        font-size: 1.15rem;
-    }
-
-    p,
-    li {
-        font-size: 1.1rem;
-        line-height: 2;
-    }
-
-    /* Cards and sections */
-    .card {
-        margin-bottom: 20px;
-        padding: 15px !important;
-    }
-
-    /* Flex adjustments */
-    .d-flex {
-        flex-wrap: wrap;
-    }
-
-    /* Reduce section spacing */
-    section,
-    .mb-5 {
-        margin-bottom: 2rem !important;
-    }
-
-    /* Navigation tabs */
-    .nav-tabs .nav-link,
-    .nav-tabs-custom .nav-link {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-
-    /* Stat numbers */
-    .stat-number {
-        font-size: 2.5rem !important;
-    }
-
-    /* ===== MOBILE TABLES - HORIZONTAL SCROLL ===== */
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-    }
-
-    table thead,
-    table tbody,
-    table tr {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
-    }
-
-    table thead {
-        display: table-header-group;
-    }
-
-    table tbody {
-        display: table-row-group;
-    }
-
-    th,
-    td {
-        padding: 10px 12px;
-        font-size: 0.9rem;
-        white-space: nowrap;
-        min-width: 120px;
-    }
-
-    /* Scroll indicator */
-    table::after {
-        content: '← اسحب للمزيد →';
-        display: block;
-        text-align: center;
-        padding: 8px;
-        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-        color: #1565c0;
-        font-size: 0.85rem;
-        font-weight: 600;
-        border-radius: 0 0 8px 8px;
-    }
-}
-
-/* ===== Small Mobile Styles (max-width: 480px) ===== */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        word-wrap: break-word;
-    }
-
-    h2 {
-        font-size: 1.35rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    /* Hero section adjustments */
-    .hero-section {
-        padding: 80px 0 50px !important;
-    }
-
-    /* Badges */
-    .badge {
-        font-size: 0.8rem !important;
-        padding: 6px 12px !important;
-        margin-bottom: 5px;
-    }
-
-    /* Statistics */
-    .stat-number {
-        font-size: 2rem !important;
-    }
-
-    /* Buttons */
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-    }
-
-    /* Tables on small screens */
-    th,
-    td {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-        min-width: 100px;
-    }
-
-    /* Language switcher */
-    .language-switcher {
-        top: 5px !important;
-        left: 5px !important;
-        padding: 6px 10px !important;
-    }
-
-    .lang-btn {
-        padding: 5px 10px !important;
-        font-size: 12px !important;
-    }
-
-    /* Floating navigation */
-    .floating-nav {
-        transform: scale(0.85);
-        right: 5px !important;
-    }
-}
-
-/* ===== RTL Specific Adjustments ===== */
-[dir="rtl"] th,
-[dir="rtl"] td {
-    text-align: right;
-}
-
-/* ===== Print Styles ===== */
-@media print {
-    body {
-        font-size: 12pt;
-    }
-
-    .language-switcher,
-    .floating-nav,
-    .watermark {
-        display: none !important;
-    }
-
-    table {
-        display: table;
-        page-break-inside: avoid;
-    }
-
-    table::after {
-        display: none;
-    }
-
-    .card {
-        break-inside: avoid;
+        padding: 5px;
     }
 }
