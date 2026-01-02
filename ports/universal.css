@@ -12,8 +12,6 @@
 
 html {
     -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-    /* Prevent horizontal body scroll, only internal */
 }
 
 body {
@@ -26,12 +24,9 @@ body {
 /* This ensures tables stay as tables and scroll as a unit */
 table {
     display: table !important;
-    /* Force table structure */
     border-collapse: collapse !important;
     width: auto !important;
-    /* Allow table to define its own width */
     min-width: 100% !important;
-    /* But at least full width */
     margin: 20px 0 !important;
 }
 
