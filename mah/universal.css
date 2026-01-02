@@ -1,34 +1,35 @@
 
 /* 
- * Universal Freedom CSS v4.0 - FINAL EMERGENCY VERSION
- * Forces Absolute Zoom Out and Table Scrolling
+ * Universal Freedom CSS v5.0 - THE FINAL WORD
+ * Unlocks Absolute Zoom & Smooth Scroll
  */
 
 html, body {
-    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important; /* The most important rule for zoom out */
     overflow-x: visible !important;
     width: auto !important;
     min-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
     position: relative !important;
+    -webkit-text-size-adjust: auto !important;
 }
 
-/* Ensure all tables and tabs are scrollable and don't fragment */
+/* Ensure ALL components that need horizontal scroll get it, without locking the page */
 .table-container, .table-responsive, .nav-tabs, .nav-pills, .tabs-navigation, .tab-pane {
     display: block !important;
     width: 100% !important;
-    overflow-x: auto !important;
+    overflow-x: auto !important; /* Internal scroll only */
     overflow-y: visible !important;
     -webkit-overflow-scrolling: touch !important;
-    margin-bottom: 20px !important;
-    position: relative !important;
+    margin-bottom: 2rem !important;
 }
 
+/* Force tables to remain unbroken grids */
 table {
     display: table !important;
-    width: 100% !important;
-    min-width: 800px !important; /* Forces scroll incentive */
+    width: auto !important;
+    min-width: 100% !important;
     border-collapse: collapse !important;
 }
 
@@ -39,12 +40,10 @@ th, td {
     border: 1px solid #dee2e6 !important;
 }
 
-/* Tab specific - Horizontal scroll */
+/* Tabs: Forced horizontal bar */
 .nav-tabs, .nav-pills {
     display: flex !important;
     flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    padding: 10px 0 !important;
 }
 
 .nav-link, .tab {
