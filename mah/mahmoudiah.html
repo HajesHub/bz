@@ -2,583 +2,66 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW36LP2Q5F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VW36LP2Q5F');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تقرير متكامل: دراسة جدوى مشروع المياه والزراعة - قطعة المحمودية</title>
-    <style>
-        :root {
-            --primary-color: #1a5f7a;
-            --secondary-color: #57cc99;
-            --accent-color: #22577a;
-            --light-bg: #f8f9fa;
-            --dark-text: #333;
-            --border-color: #ddd;
-            --success-color: #28a745;
-            --warning-color: #ffc107;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f5f7fa;
-            color: var(--dark-text);
-            line-height: 1.5;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* شريط التحرير - سيتم إخفاؤه في PDF */
-        .editing-bar {
-            background: linear-gradient(135deg, #4a5568, #2d3748);
-            padding: 10px 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .editing-bar button {
-            background: linear-gradient(135deg, #57cc99, #38a169);
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            min-width: 120px;
-            justify-content: center;
-        }
-
-        .editing-bar button:hover {
-            background: linear-gradient(135deg, #38a169, #2f855a);
-            transform: translateY(-1px);
-        }
-
-        .container {
-            background-color: white;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        header .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .date-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-        }
-
-        .nav-tabs {
-            display: flex;
-            background-color: var(--light-bg);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .tab {
-            padding: 15px 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            border-bottom: 3px solid transparent;
-            font-size: 0.95rem;
-        }
-
-        .tab:hover {
-            background-color: rgba(87, 204, 153, 0.1);
-        }
-
-        .tab.active {
-            border-bottom: 3px solid var(--secondary-color);
-            color: var(--primary-color);
-            background-color: white;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--secondary-color);
-            font-size: 1.5rem;
-            page-break-after: avoid;
-        }
-
-        h3 {
-            color: var(--accent-color);
-            margin: 20px 0 12px;
-            font-size: 1.2rem;
-            page-break-after: avoid;
-        }
-
-        .summary-box {
-            background-color: #f0f9ff;
-            border-right: 4px solid var(--secondary-color);
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            page-break-inside: avoid;
-        }
-
-        .highlight {
-            background-color: #fff9e6;
-            padding: 12px;
-            border-radius: 6px;
-            margin: 15px 0;
-            border-right: 4px solid var(--warning-color);
-            page-break-inside: avoid;
-        }
-
-        .indicator-card {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            background-color: white;
-            border-radius: 6px;
-            margin-bottom: 12px;
-            border-right: 3px solid var(--secondary-color);
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
-
-        .indicator-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(87, 204, 153, 0.15);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 12px;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .indicator-content {
-            flex: 1;
-        }
-
-        .indicator-title {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-            font-size: 1rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 18px 0;
-            font-size: 0.9rem;
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
-
-        th {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px;
-            text-align: right;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        td {
-            padding: 10px 12px;
-            border-bottom: 1px solid var(--border-color);
-            line-height: 1.4;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .recommendation-box {
-            background-color: #e8f5e9;
-            padding: 18px;
-            border-radius: 6px;
-            margin: 18px 0;
-            border-right: 4px solid var(--success-color);
-            page-break-inside: avoid;
-        }
-
-        .recommendation-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-        }
-
-        .recommendation-number {
-            background-color: var(--success-color);
-            color: white;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 12px;
-            flex-shrink: 0;
-            font-size: 0.9rem;
-        }
-
-        .production-table {
-            overflow-x: auto;
-        }
-
-        .financial-summary {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            page-break-inside: avoid;
-            gap: 10px;
-        }
-
-        .financial-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 18px;
-            border-radius: 8px;
-            text-align: center;
-            flex: 1;
-            min-width: 180px;
-            page-break-inside: avoid;
-        }
-
-        .financial-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 10px 0;
-        }
-
-        .conclusion {
-            background-color: #f0f9ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-            border-top: 4px solid var(--secondary-color);
-            page-break-inside: avoid;
-        }
-
-        .conclusion h3 {
-            color: var(--primary-color);
-            margin-bottom: 12px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-            color: #666;
-            font-size: 0.85rem;
-            page-break-before: avoid;
-        }
-
-        p {
-            margin-bottom: 12px;
-            line-height: 1.5;
-            text-align: justify;
-        }
-
-        /* تحسينات للطباعة واستغلال المساحة */
-        @media print {
-            .editing-bar {
-                display: none !important;
-            }
-
-            body {
-                background-color: white;
-                padding: 0 !important;
-                margin: 0 !important;
-                max-width: 100% !important;
-                font-size: 11pt;
-                line-height: 1.4;
-            }
-
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-                margin: 0 !important;
-                padding: 0 !important;
-                width: 100%;
-            }
-
-            /* إخفاء تبويبات التنقل في الطباعة */
-            .nav-tabs {
-                display: none !important;
-            }
-
-            /* عرض جميع المحتويات في الطباعة */
-            .tab-content {
-                display: block !important;
-                padding: 10px 15px !important;
-                margin: 0 !important;
-                page-break-before: always;
-            }
-
-            /* تجنب بدء المحتوى الأول بصفحة جديدة */
-            .tab-content:first-of-type {
-                page-break-before: avoid;
-            }
-
-            /* تحسين الهوامش في الطباعة */
-            header {
-                padding: 15px !important;
-                margin-bottom: 10px !important;
-            }
-
-            h1,
-            h2,
-            h3 {
-                margin-top: 12px !important;
-                margin-bottom: 10px !important;
-                page-break-after: avoid;
-            }
-
-            .summary-box,
-            .recommendation-box,
-            .highlight,
-            .conclusion {
-                padding: 12px !important;
-                margin: 12px 0 !important;
-                page-break-inside: avoid;
-            }
-
-            .indicator-card {
-                padding: 10px !important;
-                margin-bottom: 10px !important;
-                page-break-inside: avoid;
-            }
-
-            table {
-                margin: 12px 0 !important;
-                font-size: 10pt !important;
-                page-break-inside: avoid;
-            }
-
-            th,
-            td {
-                padding: 8px 10px !important;
-            }
-
-            .financial-summary {
-                margin: 15px 0 !important;
-                gap: 8px;
-            }
-
-            .financial-card {
-                padding: 12px !important;
-                min-width: 150px !important;
-            }
-
-            .financial-value {
-                font-size: 1.5rem !important;
-            }
-
-            footer {
-                margin-top: 15px !important;
-                padding-top: 10px !important;
-                font-size: 9pt !important;
-            }
-
-            /* تحسين تقسيم الصفحات */
-            h2,
-            h3 {
-                page-break-after: avoid;
-            }
-
-            p,
-            ul,
-            ol {
-                orphans: 3;
-                widows: 3;
-            }
-
-            /* تجنب تقسيم الجداول بين صفحات */
-            table {
-                page-break-inside: avoid;
-            }
-
-            /* تجنب تقسيم القوائم */
-            ul,
-            ol {
-                page-break-inside: avoid;
-            }
-
-            /* تقليل المسافات الزائدة */
-            * {
-                margin-top: 0.2em !important;
-                margin-bottom: 0.2em !important;
-            }
-
-            /* تحسين عرض التواريخ */
-            .date-badge {
-                position: static;
-                display: inline-block;
-                margin-bottom: 10px !important;
-            }
-        }
-
-        /* تحسينات للشاشات الصغيرة */
-        @media (max-width: 768px) {
-            .nav-tabs {
-                flex-direction: column;
-            }
-
-            .tab {
-                text-align: center;
-                border-bottom: 1px solid var(--border-color);
-            }
-
-            .tab.active {
-                border-bottom: 3px solid var(--secondary-color);
-            }
-
-            .financial-summary {
-                flex-direction: column;
-            }
-
-            .financial-card {
-                margin: 8px 0;
-                min-width: 100%;
-            }
-
-            .date-badge {
-                position: relative;
-                top: 0;
-                left: 0;
-                margin-bottom: 10px;
-                display: inline-block;
-            }
-
-            .editing-bar {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 8px;
-            }
-
-            .editing-bar button {
-                width: 100%;
-                margin: 2px 0;
-            }
-
-            .tab-content {
-                padding: 15px;
-            }
-        }
-
-        /* تحسينات إضافية لاستغلال المساحة */
-        .compact-table {
-            font-size: 0.9em;
-        }
-
-        .compact-table th,
-        .compact-table td {
-            padding: 8px 10px;
-        }
-
-        .no-break {
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
-
-        .page-break {
-            page-break-before: always;
-        }
-
-        .keep-together {
-            page-break-inside: avoid;
-        }
-
-        /* تقليل المسافات بين العناصر في حالة الطباعة */
-        @media print {
-            .section-spacing {
-                margin-top: 8px !important;
-                margin-bottom: 8px !important;
-            }
-
-            .paragraph-spacing {
-                margin-bottom: 6px !important;
-            }
-
-            /* تجنب الفراغات الكبيرة في نهاية الصفحات */
-            .avoid-break {
-                page-break-inside: avoid;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- شريط التحرير - سيتم إخفاؤه في PDF -->
-    <div class="editing-bar">
-        <button onclick="editor.enable()">✏️ تفعيل التحرير</button>
-        <button onclick="editor.disable()">🔒 إيقاف التحرير</button>
-        <button onclick="editor.save()">💾 حفظ كـ HTML</button>
-        <button onclick="editor.hideToolbar()">📄 إخفاء للطباعة</button>
-        <button onclick="editor.showToolbar()">👁️ إظهار الشريط</button>
+
+    <div class="floating-nav" id="floatingNav">
+        <a href="#water" class="nav-dot active" data-target="water" title="دراسة المياه">
+            🌊
+            <span class="tooltip">دراسة المياه</span>
+        </a>
+        <a href="#agriculture" class="nav-dot" data-target="agriculture" title="الخطة الزراعية">
+            🌾
+            <span class="tooltip">الخطة الزراعية</span>
+        </a>
+        <a href="#subprojects" class="nav-dot" data-target="subprojects" title="المشاريع الفرعية">
+            📈
+            <span class="tooltip">المشاريع الفرعية</span>
+        </a>
+        <a href="#videos" class="nav-dot" data-target="videos" title="المعرض">
+            🖼️
+            <span class="tooltip">المعرض</span>
+        </a>
+        <a href="#summary" class="nav-dot" data-target="summary" title="الخلاصة">
+            📊
+            <span class="tooltip">الخلاصة</span>
+        </a>
     </div>
 
     <div class="container">
-        <header>
+        <header class="reveal">
             <div class="date-badge">15 نوفمبر 2025</div>
-            <h1>تقرير متكامل: دراسة جدوى مشروع المياه والزراعة</h1>
-            <div class="subtitle">قطعة "المحمودية" - وادي ناوان</div>
+            <h1>دراسة جدوى متكاملة: مشروع المحمودية</h1>
+            <div class="subtitle">الجمع بين الاستكشاف الهيدروجيولوجي والإنتاج الزراعي المستدام</div>
         </header>
 
-        <div class="nav-tabs">
+        <div class="nav-tabs reveal">
             <div class="tab active" data-tab="water">🌊 احتمال نجاح مشروع حفر بئر</div>
             <div class="tab" data-tab="agriculture">🌾 دراسة الإنتاج الزراعي</div>
+            <div class="tab" data-tab="subprojects">📈 مشاريع فرعية</div>
+            <div class="tab" data-tab="videos">🖼️ معرض الفيديوهات والصور</div>
             <div class="tab" data-tab="summary">📊 الخلاصة النهائية</div>
         </div>
 
-        <div class="tab-content active" id="water">
+        <div class="tab-content active reveal" id="water">
             <h2>احتمالية وجود مياه جوفية في قطعة "المحمودية" – وادي ناوان</h2>
 
             <div class="summary-box">
@@ -668,7 +151,7 @@
             </div>
         </div>
 
-        <div class="tab-content" id="agriculture">
+        <div class="tab-content reveal" id="agriculture">
             <h2>دراسة الإنتاج الزراعي - دورة الذرة الرفيعة العلفية</h2>
 
             <div class="summary-box">
@@ -898,136 +381,370 @@
                 </tr>
             </table>
         </div>
+    </div>
 
-        <div class="tab-content" id="summary">
-            <h2>الخلاصة النهائية والتكامل بين المشروعين</h2>
+    <div class="tab-content reveal" id="subprojects">
+        <div id="subprojects-loader" style="text-align: center; padding: 50px; color: var(--primary-color);">
+            <div style="font-size: 2rem; margin-bottom: 15px;">⏳</div>
+            <p>جاري تحميل بيانات المشاريع الفرعية...</p>
+        </div>
+        <div id="subprojects-content"></div>
+    </div>
 
-            <div class="conclusion keep-together">
-                <h3>النتيجة الشاملة</h3>
-                <p>بناءً على التحليل الهيدروجيولوجي والدراسة الزراعية، فإن مشروع قطعة <strong>المحمودية</strong> يظهر
-                    إمكانات عالية للنجاح على المستويين:</p>
-            </div>
+    <div class="tab-content reveal" id="videos">
+        <h2>معرض الفيديوهات والصور التوثيقية</h2>
 
-            <h3>📊 تقييم احتمالية نجاح حفر البئر</h3>
+        <div class="summary-box">
+            <h3>توثيق حي للمشروع</h3>
+            <p>يمكنك هنا دمج مقاطع فيديو من يوتيوب لتوثيق مراحل العمل، طبيعة الأرض، أو شروحات إضافية. الفيديوهات أدناه
+                مجرد أمثلة وتعمل بشكل مباشر داخل التقرير.</p>
+        </div>
 
-            <div class="indicator-card">
-                <div class="indicator-icon">✅</div>
-                <div class="indicator-content">
-                    <div class="indicator-title">مؤشرات إيجابية قوية</div>
-                    <p>موقع المحمودية داخل الامتداد الرسوبي الطبيعي للوادي، ووجود خزان جوفي ممتد، والتكوين الأرضي النفاذ
-                        (رمال + حصى) جميعها عوامل تدعم احتمالية عالية لنجاح حفر البئر.</p>
+        <div class="video-grid">
+            <!-- فيديو 1 -->
+            <div class="video-card">
+                <div class="video-container" id="container1">
+                    <!-- استبدل الرابط في src برابط التضمين الخاص بالفيديو المطلوب -->
+                    <iframe id="player1"
+                        src="https://www.youtube.com/embed/Yu7YqgHPKRU?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player1')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
                 </div>
+                <div class="video-title">🎥 تشغيل غطاس البئر على بالطاقة الشمسية يوفر تكاليف كبيرة</div>
             </div>
 
-            <div class="indicator-card">
-                <div class="indicator-icon">💡</div>
-                <div class="indicator-content">
-                    <div class="indicator-title">التوصية الأساسية</div>
-                    <p>ضرورة إجراء مسح جيوفيزيائي قبل الحفر لتحديد نقطة الحفر الدقيقة والعمق المتوقع، مما يزيد من فرص
-                        النجاح ويقلل المخاطر.</p>
+            <!-- فيديو 2 -->
+            <div class="video-card">
+                <div class="video-container" id="container2">
+                    <iframe id="player2"
+                        src="https://www.youtube.com/embed/SFdeV_CoCMI?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player2')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
                 </div>
+                <div class="video-title">💧 مثال 2: اختبار ضخ بئر جوفي</div>
             </div>
 
-            <h3>📈 الجدوى الاقتصادية للمشروع الزراعي</h3>
-
-            <div class="indicator-card">
-                <div class="indicator-icon">💰</div>
-                <div class="indicator-content">
-                    <div class="indicator-title">الإيرادات المتوقعة</div>
-                    <p>يمكن تحقيق إيرادات تصل إلى <strong>300,000 ريال</strong> خلال سنة و7 أشهر عبر دورة مكثفة للذرة
-                        الرفيعة العلفية (8 حشات، 400 طن إنتاج).</p>
+            <!-- فيديو 3 -->
+            <div class="video-card">
+                <div class="video-container" id="container3">
+                    <iframe id="player3"
+                        src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player3')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
                 </div>
+                <div class="video-title">📸 فيديو 3: توثيق الموقع (مثال)</div>
             </div>
 
-            <div class="indicator-card">
-                <div class="indicator-icon">🔄</div>
-                <div class="indicator-content">
-                    <div class="indicator-title">التكامل بين المشروعين</div>
-                    <p>توفر المياه الجوفية مصدر ري مستدام يدعم الجدوى الاقتصادية للمشروع الزراعي. نجاح البئر يعني تأمين
-                        مصدر مائي دائم للري، مما يضمن استمرارية الإنتاج الزراعي.</p>
+            <!-- فيديو 4 -->
+            <div class="video-card">
+                <div class="video-container" id="container4">
+                    <iframe id="player4"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player4')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
                 </div>
+                <div class="video-title">🏗️ فيديو 4: تجهيز التربة (مثال)</div>
             </div>
 
-            <div class="highlight keep-together">
-                <h3>الخطوات التوصية التنفيذية</h3>
-                <ol style="padding-right: 20px; margin-top: 10px;">
-                    <li style="margin-bottom: 8px;"><strong>المرحلة الأولى:</strong> إجراء المسح الجيوفيزيائي لتحديد
-                        نقطة الحفر المثلى.</li>
-                    <li style="margin-bottom: 8px;"><strong>المرحلة الثانية:</strong> حفر البئر والاختبار لضمان تدفق
-                        المياه وجودتها.</li>
-                    <li style="margin-bottom: 8px;"><strong>المرحلة الثالثة:</strong> تهيئة الأرض للزراعة وبدء الدورة
-                        الزراعية حسب الجدول الزمني.</li>
-                    <li><strong>المرحلة الرابعة:</strong> المتابعة الدورية للإنتاج ومراقبة منسوب المياه في البئر.</li>
-                </ol>
+            <!-- فيديو 5 -->
+            <div class="video-card">
+                <div class="video-container" id="container5">
+                    <iframe id="player5"
+                        src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player5')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
+                </div>
+                <div class="video-title">🌿 فيديو 5: مراحل النمو (مثال)</div>
             </div>
 
-            <div class="recommendation-box keep-together">
-                <h3>الخلاصة النهائية</h3>
-                <p>مشروع قطعة <strong>المحمودية</strong> يمثل فرصة استثمارية متكاملة، حيث تدعم الدراسة الهيدروجيولوجية
-                    احتمالية عالية لنجاح حفر البئر، بينما تظهر الدراسة الزراعية إمكانية تحقيق عوائد اقتصادية مجدية. نجاح
-                    المشروع يعتمد على التنفيذ المنهجي بدءاً بالمسح الجيوفيزيائي، ثم الحفر، ثم تنفيذ الخطة الزراعية.</p>
-                <p style="margin-top: 12px; font-weight: bold; color: var(--primary-color);">حفر البئر هنا خطوة منطقية
-                    ومدعومة علمياً... وفرصة كبيرة للحصول على مصدر مائي دائم ودعم الإنتاج الزراعي المجدي اقتصادياً.</p>
+            <!-- فيديو 6 -->
+            <div class="video-card">
+                <div class="video-container" id="container6">
+                    <iframe id="player6"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="video-overlay" onclick="playCurrentVideo('player6')">
+                        <div class="play-icon">▶️</div>
+                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
+                    </div>
+                </div>
+                <div class="video-title">🚜 فيديو 6: الحصاد والتعبئة (مثال)</div>
             </div>
         </div>
 
-        <footer>
-            <p>تم إعداد هذا التقرير بناءً على: التقرير الاستبشاري الهيدروجيولوجي (15 نوفمبر 2025) ودراسة الجدوى الزراعية
-                والإنتاجية.</p>
-            <p style="margin-top: 10px;">© 2025 - تقرير متكامل لدراسة جدوى مشروع المياه والزراعة</p>
-        </footer>
+        <!-- معرض الصور -->
+        <div class="image-gallery-section">
+            <h3>📸 معرض الصور التقدمية</h3>
+            <div class="image-grid">
+                <div class="image-card" onclick="openLightbox('images/valley.png', 'إطلالة جوية على منطقة المشروع')">
+                    <img src="images/valley.png" alt="منظر جوي للوادي">
+                    <div class="image-caption">إطلالة جوية على منطقة المشروع</div>
+                </div>
+                <div class="image-card" onclick="openLightbox('images/well.png', 'تجهيزات حفر بئر المياه')">
+                    <img src="images/well.png" alt="بئر مياه">
+                    <div class="image-caption">تجهيزات حفر بئر المياه</div>
+                </div>
+                <div class="image-card" onclick="openLightbox('images/irrigation.png', 'أنظمة الري الحديثة المنفذة')">
+                    <img src="images/irrigation.png" alt="نظام ري">
+                    <div class="image-caption">أنظمة الري الحديثة المنفذة</div>
+                </div>
+                <div class="image-card" onclick="openLightbox('images/geology.png', 'التحليل الهيدروجيولوجي للتربة')">
+                    <img src="images/geology.png" alt="دراسة جيولوجية">
+                    <div class="image-caption">التحليل الهيدروجيولوجي للتربة</div>
+                </div>
+                <div class="image-card" onclick="openLightbox('images/harvest.png', 'مراحل الحصاد والإنتاج الزراعي')">
+                    <img src="images/harvest.png" alt="حصاد">
+                    <div class="image-caption">مراحل الحصاد والإنتاج الزراعي</div>
+                </div>
+                <div class="image-card"
+                    onclick="openLightbox('images/taqa.jpg', 'لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً')">
+                    <img src="images/taqa.jpg" alt="تشغيل الغطاس ">
+                    <div class="image-caption"> لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة عرض الصور المكبرة -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" id="closeModal">إغلاق X</span>
+        <img class="modal-content" id="fullImage">
+        <div id="caption" class="modal-caption"></div>
+    </div>
+
+    <div class="tab-content reveal" id="summary">
+        <h2>الخلاصة النهائية والتكامل بين المشروعين</h2>
+
+        <div class="conclusion keep-together">
+            <h3>النتيجة الشاملة</h3>
+            <p>بناءً على التحليل الهيدروجيولوجي والدراسة الزراعية، فإن مشروع قطعة <strong>المحمودية</strong> يظهر
+                إمكانات عالية للنجاح على المستويين:</p>
+        </div>
+
+        <h3>📊 تقييم احتمالية نجاح حفر البئر</h3>
+
+        <div class="indicator-card">
+            <div class="indicator-icon">✅</div>
+            <div class="indicator-content">
+                <div class="indicator-title">مؤشرات إيجابية قوية</div>
+                <p>موقع المحمودية داخل الامتداد الرسوبي الطبيعي للوادي، ووجود خزان جوفي ممتد، والتكوين الأرضي النفاذ
+                    (رمال + حصى) جميعها عوامل تدعم احتمالية عالية لنجاح حفر البئر.</p>
+            </div>
+        </div>
+
+        <div class="indicator-card">
+            <div class="indicator-icon">💡</div>
+            <div class="indicator-content">
+                <div class="indicator-title">التوصية الأساسية</div>
+                <p>ضرورة إجراء مسح جيوفيزيائي قبل الحفر لتحديد نقطة الحفر الدقيقة والعمق المتوقع، مما يزيد من فرص
+                    النجاح ويقلل المخاطر.</p>
+            </div>
+        </div>
+
+        <h3>📈 الجدوى الاقتصادية للمشروع الزراعي</h3>
+
+        <div class="indicator-card">
+            <div class="indicator-icon">💰</div>
+            <div class="indicator-content">
+                <div class="indicator-title">الإيرادات المتوقعة</div>
+                <p>يمكن تحقيق إيرادات تصل إلى <strong>300,000 ريال</strong> خلال سنة و7 أشهر عبر دورة مكثفة للذرة
+                    الرفيعة العلفية (8 حشات، 400 طن إنتاج).</p>
+            </div>
+        </div>
+
+        <div class="indicator-card">
+            <div class="indicator-icon">🔄</div>
+            <div class="indicator-content">
+                <div class="indicator-title">التكامل بين المشروعين</div>
+                <p>توفر المياه الجوفية مصدر ري مستدام يدعم الجدوى الاقتصادية للمشروع الزراعي. نجاح البئر يعني تأمين
+                    مصدر مائي دائم للري، مما يضمن استمرارية الإنتاج الزراعي.</p>
+            </div>
+        </div>
+
+        <div class="highlight keep-together">
+            <h3>الخطوات التوصية التنفيذية</h3>
+            <ol style="padding-right: 20px; margin-top: 10px;">
+                <li style="margin-bottom: 8px;"><strong>المرحلة الأولى:</strong> إجراء المسح الجيوفيزيائي لتحديد
+                    نقطة الحفر المثلى.</li>
+                <li style="margin-bottom: 8px;"><strong>المرحلة الثانية:</strong> حفر البئر والاختبار لضمان تدفق
+                    المياه وجودتها.</li>
+                <li style="margin-bottom: 8px;"><strong>المرحلة الثالثة:</strong> تهيئة الأرض للزراعة وبدء الدورة
+                    الزراعية حسب الجدول الزمني.</li>
+                <li><strong>المرحلة الرابعة:</strong> المتابعة الدورية للإنتاج ومراقبة منسوب المياه في البئر.</li>
+            </ol>
+        </div>
+
+        <div class="recommendation-box keep-together">
+            <h3>الخلاصة النهائية</h3>
+            <p>مشروع قطعة <strong>المحمودية</strong> يمثل فرصة استثمارية متكاملة، حيث تدعم الدراسة الهيدروجيولوجية
+                احتمالية عالية لنجاح حفر البئر، بينما تظهر الدراسة الزراعية إمكانية تحقيق عوائد اقتصادية مجدية. نجاح
+                المشروع يعتمد على التنفيذ المنهجي بدءاً بالمسح الجيوفيزيائي، ثم الحفر، ثم تنفيذ الخطة الزراعية.</p>
+            <p style="margin-top: 12px; font-weight: bold; color: var(--primary-color);">حفر البئر هنا خطوة منطقية
+                ومدعومة علمياً... وفرصة كبيرة للحصول على مصدر مائي دائم ودعم الإنتاج الزراعي المجدي اقتصادياً.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>تم إعداد هذا التقرير بناءً على: التقرير الاستبشاري الهيدروجيولوجي (15 نوفمبر 2025) ودراسة الجدوى الزراعية
+            والإنتاجية.</p>
+        <p style="margin-top: 10px;">© 2025 - تقرير متكامل لدراسة جدوى مشروع المياه والزراعة</p>
+    </footer>
     </div>
 
     <script>
         // تعريف كائن editor مع جميع الوظائف المطلوبة
-        window.editor = {
-            enable: function () {
-                document.querySelectorAll('.editing-bar button').forEach(btn => {
-                    btn.disabled = false;
-                });
-                alert('تم تفعيل التحرير - يمكنك الآن استخدام أزرار التحرير');
-            },
-            disable: function () {
-                document.querySelectorAll('.editing-bar button').forEach(btn => {
-                    btn.disabled = true;
-                });
-                alert('تم إيقاف التحرير - الأزرار غير مفعلة الآن');
-            },
-            save: function () {
-                // حفظ كـ HTML
-                const htmlContent = document.documentElement.outerHTML;
-                const blob = new Blob([htmlContent], { type: 'text/html' });
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(blob);
-                a.download = 'تقرير_المحمودية_معدل.html';
-                a.click();
-                alert('تم حفظ الملف كـ HTML');
-            },
-            hideToolbar: function () {
-                // إخفاء شريط التحرير
-                const editingBar = document.querySelector('.editing-bar');
-                if (editingBar) {
-                    editingBar.style.display = 'none';
-                }
-                // عند الإخفاء للطباعة، نعرض جميع المحتويات
-                document.querySelectorAll('.tab-content').forEach(content => {
-                    content.style.display = 'block';
-                });
-                document.querySelector('.nav-tabs').style.display = 'none';
-                alert('تم إخفاء شريط التحرير وتبويبات التنقل - جاهز للطباعة/التصدير');
-            },
-            showToolbar: function () {
-                // إظهار شريط التحرير
-                const editingBar = document.querySelector('.editing-bar');
-                if (editingBar) {
-                    editingBar.style.display = 'flex';
-                }
-                // إعادة تبويبات التنقل
-                document.querySelector('.nav-tabs').style.display = 'flex';
-                alert('تم إظهار شريط التحرير وتبويبات التنقل');
-            }
-        };
 
+
+        // تحميل YouTube IFrame Player API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var players = [];
+        function onYouTubeIframeAPIReady() {
+            const iframes = document.querySelectorAll('.video-container iframe');
+            iframes.forEach((iframe, index) => {
+                players.push(new YT.Player(iframe.id, {
+                    events: {
+                        'onStateChange': onPlayerStateChange
+                    }
+                }));
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            const playerElement = event.target.getIframe();
+            const overlay = playerElement.nextElementSibling;
+
+            // إذا بدأ فيديو بالعمل (حالة التشغيل هي 1)
+            if (event.data == YT.PlayerState.PLAYING) {
+                // إخفاء الغطاء الحالي
+                if (overlay) overlay.style.display = 'none';
+
+                // إيقاف جميع الفيديوهات الأخرى
+                players.forEach(player => {
+                    if (player !== event.target && player.getPlayerState() === YT.PlayerState.PLAYING) {
+                        player.pauseVideo();
+                    }
+                });
+            } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                // إظهار الغطاء عند التوقف أو الانتهاء
+                if (overlay) overlay.style.display = 'flex';
+            }
+        }
+
+        function playCurrentVideo(playerId) {
+            const player = players.find(p => p.getIframe().id === playerId);
+            if (player) {
+                player.playVideo();
+            }
+        }
+
+        // وظائف نافذة عرض الصور
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("fullImage");
+        const captionText = document.getElementById("caption");
+
+        function openLightbox(src, caption) {
+            modal.style.display = "block";
+            modalImg.src = src;
+            captionText.innerHTML = caption;
+            document.body.style.overflow = "hidden"; // منع التمرير في الصفحة الخلفية
+        }
+
+        document.getElementById("closeModal").onclick = function () {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // إغلاق النافذة عند الضغط في أي مكان خارج الصورة
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+
+        // --- حركات الظهور الانسيابية ---
+        function revealSections() {
+            const reveals = document.querySelectorAll(".reveal");
+            const windowHeight = window.innerHeight;
+            const revealPoint = 100;
+
+            reveals.forEach(reveal => {
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add("revealed");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealSections);
+        document.addEventListener("DOMContentLoaded", revealSections);
+
+        // --- منطق التنقل العائم ---
+        const dots = document.querySelectorAll('.nav-dot');
+        const sections = document.querySelectorAll('.tab-content'); // Not directly used for scrolling, but for context
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const targetTab = document.querySelector(`.tab[data-tab="${targetId}"]`);
+
+                // Simulate click on the main tab to activate it
+                if (targetTab) {
+                    targetTab.click();
+                    // Scroll to the top of the container or a specific offset
+                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of page
+                }
+            });
+        });
+
+        // تحديث النقطة النشطة في الفهرس الجانبي
+        function updateActiveDot() {
+            const activeTab = document.querySelector('.tab.active');
+            if (activeTab) {
+                const currentTabId = activeTab.getAttribute('data-tab');
+                dots.forEach(dot => {
+                    if (dot.getAttribute('data-target') === currentTabId) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        // Modify the existing DOMContentLoaded listener for tabs
         document.addEventListener('DOMContentLoaded', function () {
             const tabs = document.querySelectorAll('.tab');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -1042,6 +759,53 @@
                     tab.classList.add('active');
                     const tabId = tab.getAttribute('data-tab');
                     document.getElementById(tabId).classList.add('active');
+
+                    // --- استدعاء المحتوى المنفصل للمشاريع الفرعية ---
+                    if (tabId === 'subprojects') {
+                        const contentDiv = document.getElementById('subprojects-content');
+                        const loader = document.getElementById('subprojects-loader');
+
+                        // تحميل المحتوى فقط إذا لم يتم تحميله من قبل
+                        if (contentDiv.innerHTML === "") {
+                            fetch('mahber.html')
+                                .then(response => response.text())
+                                .then(html => {
+                                    const parser = new DOMParser();
+                                    const doc = parser.parseFromString(html, 'text/html');
+                                    // استخراج المحتوى الموجود داخل الحاوية الرئيسية في الملف الآخر
+                                    const externalContent = doc.querySelector('.container').innerHTML;
+
+                                    // تنظيف المحتوى من الهيدر والفوتر والتبويبات إذا وجدت لتجنب التكرار
+                                    const tempDiv = document.createElement('div');
+                                    tempDiv.innerHTML = externalContent;
+                                    const headerToRemove = tempDiv.querySelector('header');
+                                    const navToRemove = tempDiv.querySelector('.nav-tabs');
+                                    const footerToRemove = tempDiv.querySelector('footer');
+                                    if (headerToRemove) headerToRemove.remove();
+                                    if (navToRemove) navToRemove.remove();
+                                    if (footerToRemove) footerToRemove.remove();
+
+                                    // جعل جميع الأقسام مرئية (لأنها في الملف الأصلي مقسمة لتبويبات مخفية)
+                                    tempDiv.querySelectorAll('.tab-content').forEach(c => {
+                                        c.style.display = 'block';
+                                        c.classList.add('active'); // لضمان تطبيق الحركات
+                                    });
+
+                                    contentDiv.innerHTML = tempDiv.innerHTML;
+                                    loader.style.display = "none";
+
+                                    // إعادة تفعيل حركات الظهور للمحتوى الجديد
+                                    if (typeof revealSections === 'function') revealSections();
+                                })
+                                .catch(error => {
+                                    loader.innerHTML = "<p style='color:red;'>حدث خطأ أثناء تحميل المحتوى. تأكد من وجود ملف mahber.html</p>";
+                                    console.error('Error loading subprojects:', error);
+                                });
+                        }
+                    }
+
+                    // تحديث النقطة النشطة في الفهرس الجانبي
+                    if (typeof updateActiveDot === 'function') updateActiveDot();
                 });
             });
         });
