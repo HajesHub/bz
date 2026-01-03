@@ -2,70 +2,108 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VW36LP2Q5F"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-VW36LP2Q5F');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.1, user-scalable=yes">
+
+    <!-- Meta tags for better appearance -->
+    <meta name="description" content="دراسة جدوى متكاملة لمشروع المياه والزراعة - قطعة المحمودية">
+    <meta name="theme-color" content="#2c5530">
+    <meta name="keywords" content="دراسة جدوى, مشروع زراعي, مياه جوفية, المحمودية, وادي ناوان">
+
     <title>تقرير متكامل: دراسة جدوى مشروع المياه والزراعة - قطعة المحمودية</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="universal.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
 </head>
 
 <body>
-<div class="floating-nav" id="floatingNav">
+    <!-- Floating Navigation -->
+    <div class="floating-nav" id="floatingNav">
         <a href="#water" class="nav-dot active" data-target="water" title="دراسة المياه">
-            🌊
+            <i class="fas fa-water"></i>
             <span class="tooltip">دراسة المياه</span>
         </a>
         <a href="#agriculture" class="nav-dot" data-target="agriculture" title="الخطة الزراعية">
-            🌾
+            <i class="fas fa-seedling"></i>
             <span class="tooltip">الخطة الزراعية</span>
         </a>
         <a href="#subprojects" class="nav-dot" data-target="subprojects" title="المشاريع الفرعية">
-            📈
+            <i class="fas fa-project-diagram"></i>
             <span class="tooltip">المشاريع الفرعية</span>
         </a>
         <a href="#videos" class="nav-dot" data-target="videos" title="المعرض">
-            🖼️
+            <i class="fas fa-photo-video"></i>
             <span class="tooltip">المعرض</span>
         </a>
         <a href="#summary" class="nav-dot" data-target="summary" title="الخلاصة">
-            📊
+            <i class="fas fa-chart-bar"></i>
             <span class="tooltip">الخلاصة</span>
         </a>
     </div>
 
     <div class="container">
+        <!-- Header -->
         <header class="reveal">
-            <div class="date-badge">15 نوفمبر 2025</div>
+            <div class="date-badge">
+                <i class="fas fa-calendar-alt"></i>
+                15 نوفمبر 2025
+            </div>
             <h1>دراسة جدوى متكاملة: مشروع المحمودية</h1>
             <div class="subtitle">الجمع بين الاستكشاف الهيدروجيولوجي والإنتاج الزراعي المستدام</div>
         </header>
 
+        <!-- Main Navigation Tabs -->
         <div class="nav-tabs reveal">
-            <div class="tab active" data-tab="water">🌊 احتمال نجاح مشروع حفر بئر</div>
-            <div class="tab" data-tab="agriculture">🌾 دراسة الإنتاج الزراعي</div>
-            <div class="tab" data-tab="subprojects">📈 مشاريع فرعية</div>
-            <div class="tab" data-tab="videos">🖼️ معرض الفيديوهات والصور</div>
-            <div class="tab" data-tab="summary">📊 الخلاصة النهائية</div>
+            <div class="tab active" data-tab="water">
+                <i class="fas fa-water"></i>
+                احتمال نجاح مشروع حفر بئر
+            </div>
+            <div class="tab" data-tab="agriculture">
+                <i class="fas fa-seedling"></i>
+                دراسة الإنتاج الزراعي
+            </div>
+            <div class="tab" data-tab="subprojects">
+                <i class="fas fa-project-diagram"></i>
+                مشاريع فرعية
+            </div>
+            <div class="tab" data-tab="videos">
+                <i class="fas fa-photo-video"></i>
+                معرض الفيديوهات والصور
+            </div>
+            <div class="tab" data-tab="summary">
+                <i class="fas fa-chart-bar"></i>
+                الخلاصة النهائية
+            </div>
         </div>
 
+        <!-- Tab Content: Water Study -->
         <div class="tab-content active reveal" id="water">
             <h2>احتمالية وجود مياه جوفية في قطعة "المحمودية" – وادي ناوان</h2>
 
             <div class="summary-box">
-                <h3>ملخص تنفيذي</h3>
+                <h3><i class="fas fa-file-alt"></i> ملخص تنفيذي</h3>
                 <p>تشير القراءة الهيدرولوجية والجيولوجية لوادي ناوان إلى أن قطعة <strong>المحمودية</strong> تقع فوق
                     امتداد رسوبي قادر على نقل المياه الجوفية من مناطق التغذية العلوية في الوادي نحو الجزء الذي تقع فيه
                     القطعة، حتى لو لم يصل السيل إليها مباشرة. هذا النمط من انتقال المياه تحت السطح مثبت في معظم أودية
@@ -75,7 +113,9 @@
             <h3>مسار المياه الجوفية تحت السطح – كيف تصل إلى المحمودية؟</h3>
 
             <div class="indicator-card">
-                <div class="indicator-icon">📊</div>
+                <div class="indicator-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
                 <div class="indicator-content">
                     <div class="indicator-title">الانحدار الهيدرولوجي (Hydraulic Gradient)</div>
                     <p>المياه الجوفية تتحرك دائماً من المناطق المرتفعة رطوبياً (مناطق التغذية) نحو المناطق الأقل
@@ -85,7 +125,9 @@
             </div>
 
             <div class="indicator-card">
-                <div class="indicator-icon">🔄</div>
+                <div class="indicator-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
                 <div class="indicator-content">
                     <div class="indicator-title">النقل الأفقي للمياه عبر الطبقات الحصوية والرملية</div>
                     <p>طبقات الوادي مكوّنة من خليط رملي–حصوي عالي النفاذية. هذا النوع من الرواسب يسمح للمياه بالتحرك
@@ -95,7 +137,9 @@
             </div>
 
             <div class="indicator-card">
-                <div class="indicator-icon">💧</div>
+                <div class="indicator-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
                 <div class="indicator-content">
                     <div class="indicator-title">وجود خزان جوفي واحد ممتد تحت الوادي</div>
                     <p>في معظم الأودية الرسوبية، يكون الخزان الجوفي مستمرًا تحت سطح الوادي، وليس مجزأً. هذا يعني أن أي
@@ -106,30 +150,39 @@
 
             <h3>لماذا تُعد المحمودية موقعاً واعداً بالذات؟</h3>
 
-            <table class="compact-table">
-                <tr>
-                    <th>الميزة</th>
-                    <th>الشرح</th>
-                </tr>
-                <tr>
-                    <td><strong>موقعها داخل الامتداد الطبيعي للمجرى الرسوبي</strong></td>
-                    <td>المحمودية ليست على طرف الوادي؛ بل داخل امتداده، وهذا مهم جداً. الموقع الوسطي يجعلها <strong>من
-                            مناطق التجميع الجوفي (Groundwater Collection Zone)</strong>.</td>
-                </tr>
-                <tr>
-                    <td><strong>تربة نفاذة قادرة على استلام المياه الجوفية المارة تحتها</strong></td>
-                    <td>التركيب المرصود في المحيط: رمال + حصى + كونغلوميرات، وهو نفس التكوين الذي يسمح للمياه الجوفية
-                        بالتحرك تحت سطح الأرض بسهولة.</td>
-                </tr>
-                <tr>
-                    <td><strong>محاذاة هيدرولوجية مع الآبار المنتجة القريبة</strong></td>
-                    <td>الآبار المجاورة في نفس خط الامتداد الرسوبي غالباً ما تشترك في نفس الطبقة الجوفية. النجاح في
-                        الآبار القريبة يعني أن المحمودية تقع على نفس المسار الجوفي — وهذا مؤشر قوي جداً.</td>
-                </tr>
-            </table>
+            <div class="table-responsive">
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>الميزة</th>
+                            <th>الشرح</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>موقعها داخل الامتداد الطبيعي للمجرى الرسوبي</strong></td>
+                            <td>المحمودية ليست على طرف الوادي؛ بل داخل امتداده، وهذا مهم جداً. الموقع الوسطي يجعلها
+                                <strong>من
+                                    مناطق التجميع الجوفي (Groundwater Collection Zone)</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>تربة نفاذة قادرة على استلام المياه الجوفية المارة تحتها</strong></td>
+                            <td>التركيب المرصود في المحيط: رمال + حصى + كونغلوميرات، وهو نفس التكوين الذي يسمح للمياه
+                                الجوفية
+                                بالتحرك تحت سطح الأرض بسهولة.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>محاذاة هيدرولوجية مع الآبار المنتجة القريبة</strong></td>
+                            <td>الآبار المجاورة في نفس خط الامتداد الرسوبي غالباً ما تشترك في نفس الطبقة الجوفية. النجاح
+                                في
+                                الآبار القريبة يعني أن المحمودية تقع على نفس المسار الجوفي — وهذا مؤشر قوي جداً.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="recommendation-box keep-together">
-                <h3>التوصية المهنية</h3>
+                <h3><i class="fas fa-lightbulb"></i> التوصية المهنية</h3>
                 <p>استناداً إلى الانحدار الطبيعي للوادي، الامتداد الرسوبي المستمر، تحرك المياه الجوفية أفقياً نحو
                     المناطق المنخفضة، الآبار المنتجة القريبة، ونوعية التربة في المحيط، فإن احتمالية نجاح حفر بئر
                     ارتوازية في <strong>قطعة المحمودية</strong> تعتبر <strong>مرتفعة علمياً وميدانيًا</strong>.</p>
@@ -151,477 +204,846 @@
             </div>
         </div>
 
+        <!-- Tab Content: Agriculture -->
         <div class="tab-content reveal" id="agriculture">
             <h2>دراسة الإنتاج الزراعي - دورة الذرة الرفيعة العلفية</h2>
 
             <div class="summary-box">
-                <h3>نظرة عامة</h3>
+                <h3><i class="fas fa-eye"></i> نظرة عامة</h3>
                 <p>يغطي هذا الجدول دورة زراعية مكثفة لمدة <strong>530 يوماً (سنة و7 أشهر تقريباً)</strong>، بما في ذلك
                     فترات النمو والتحضير والتوقف. يتم خلال هذه الفترة إنتاج الذرة الرفيعة العلفية عبر <strong>8
                         حشات</strong> خلال موسمين.</p>
             </div>
 
-            <h3>الجدول الزمني للإنتاج</h3>
+            <h3><i class="fas fa-calendar-check"></i> الجدول الزمني للإنتاج</h3>
 
-            <div class="production-table">
+            <div class="production-table table-responsive">
                 <table class="compact-table">
-                    <tr>
-                        <th>رقم العملية</th>
-                        <th>المرحلة</th>
-                        <th>النشاط</th>
-                        <th>المدة (يوم)</th>
-                        <th>اليوم التراكمي</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>الموسم الأول (البداية)</td>
-                        <td>تحضير التربة والزراعة</td>
-                        <td>10</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>-</td>
-                        <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
-                        <td>55</td>
-                        <td>65</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>الحشة الأولى</td>
-                        <td>الحشة الأولى + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>70</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>-</td>
-                        <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
-                        <td>55</td>
-                        <td>125</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>الحشة الثانية</td>
-                        <td>الحشة الثانية + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>130</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>-</td>
-                        <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
-                        <td>55</td>
-                        <td>185</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>الحشة الثالثة</td>
-                        <td>الحشة الثالثة + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>190</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>-</td>
-                        <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
-                        <td>55</td>
-                        <td>245</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>الحشة الرابعة</td>
-                        <td>الحشة الرابعة + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>250</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>فترة التوقف والإراحة</td>
-                        <td>إزالة بقايا الجذور + تهيئة التربية</td>
-                        <td>30</td>
-                        <td>280</td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>الموسم الثاني (البداية)</td>
-                        <td>تحضير التربة والزراعة</td>
-                        <td>10</td>
-                        <td>290</td>
-                    </tr>
-                    <tr>
-                        <td>12</td>
-                        <td>-</td>
-                        <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
-                        <td>55</td>
-                        <td>345</td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>الحشة الخامسة</td>
-                        <td>الحشة الأولى للموسم الثاني + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>350</td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>-</td>
-                        <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
-                        <td>55</td>
-                        <td>405</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>الحشة السادسة</td>
-                        <td>الحشة الثانية للموسم الثاني + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>410</td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>-</td>
-                        <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
-                        <td>55</td>
-                        <td>465</td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>الحشة السابعة</td>
-                        <td>الحشة الثالثة للموسم الثاني + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>470</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>-</td>
-                        <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
-                        <td>55</td>
-                        <td>525</td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>الحشة الثامنة</td>
-                        <td>الحشة الرابعة للموسم الثاني + تعبئة بالات</td>
-                        <td>5</td>
-                        <td>530</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>رقم العملية</th>
+                            <th>المرحلة</th>
+                            <th>النشاط</th>
+                            <th>المدة (يوم)</th>
+                            <th>اليوم التراكمي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>الموسم الأول (البداية)</td>
+                            <td>تحضير التربة والزراعة</td>
+                            <td>10</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
+                            <td>55</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>الحشة الأولى</td>
+                            <td>الحشة الأولى + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>-</td>
+                            <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
+                            <td>55</td>
+                            <td>125</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>الحشة الثانية</td>
+                            <td>الحشة الثانية + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>-</td>
+                            <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
+                            <td>55</td>
+                            <td>185</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>الحشة الثالثة</td>
+                            <td>الحشة الثالثة + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>190</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>-</td>
+                            <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
+                            <td>55</td>
+                            <td>245</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>الحشة الرابعة</td>
+                            <td>الحشة الرابعة + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>فترة التوقف والإراحة</td>
+                            <td>إزالة بقايا الجذور + تهيئة التربية</td>
+                            <td>30</td>
+                            <td>280</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>الموسم الثاني (البداية)</td>
+                            <td>تحضير التربة والزراعة</td>
+                            <td>10</td>
+                            <td>290</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>-</td>
+                            <td>فترة النمو الأولى (حتى الحشة الأولى)</td>
+                            <td>55</td>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>الحشة الخامسة</td>
+                            <td>الحشة الأولى للموسم الثاني + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>350</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>-</td>
+                            <td>فترة النمو الثانية (حتى الحشة الثانية)</td>
+                            <td>55</td>
+                            <td>405</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>الحشة السادسة</td>
+                            <td>الحشة الثانية للموسم الثاني + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>410</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>-</td>
+                            <td>فترة النمو الثالثة (حتى الحشة الثالثة)</td>
+                            <td>55</td>
+                            <td>465</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>الحشة السابعة</td>
+                            <td>الحشة الثالثة للموسم الثاني + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>470</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>-</td>
+                            <td>فترة النمو الرابعة (حتى الحشة الرابعة)</td>
+                            <td>55</td>
+                            <td>525</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>الحشة الثامنة</td>
+                            <td>الحشة الرابعة للموسم الثاني + تعبئة بالات</td>
+                            <td>5</td>
+                            <td>530</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-            <h3>التوقعات المالية والإنتاجية</h3>
+            <h3><i class="fas fa-chart-line"></i> التوقعات المالية والإنتاجية</h3>
 
             <div class="financial-summary keep-together">
                 <div class="financial-card">
-                    <div>الإجمالي للحصاد</div>
+                    <h4>الإجمالي للحصاد</h4>
                     <div class="financial-value">8 حشات</div>
-                    <div>خلال موسمين</div>
+                    <p>خلال موسمين</p>
                 </div>
 
                 <div class="financial-card">
-                    <div>الإنتاج الإجمالي</div>
+                    <h4>الإنتاج الإجمالي</h4>
                     <div class="financial-value">400 طن</div>
-                    <div>وزن أخضر</div>
+                    <p>وزن أخضر</p>
                 </div>
 
                 <div class="financial-card">
-                    <div>الإيراد المتوقع</div>
+                    <h4>الإيراد المتوقع</h4>
                     <div class="financial-value">300,000 ريال</div>
-                    <div>خلال سنة و7 أشهر</div>
+                    <p>خلال سنة و7 أشهر</p>
                 </div>
             </div>
 
-            <table class="compact-table">
-                <tr>
-                    <th>البند</th>
-                    <th>الموسم الأول</th>
-                    <th>الموسم الثاني</th>
-                    <th>الإجمالي للموسمين</th>
-                </tr>
-                <tr>
-                    <td><strong>عدد الحشات</strong></td>
-                    <td>4 حشات</td>
-                    <td>4 حشات</td>
-                    <td><strong>8 حشات</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>إنتاج الحشة الواحدة</strong></td>
-                    <td>50 طناً</td>
-                    <td>50 طناً</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td><strong>الإنتاج الموسمي الإجمالي</strong></td>
-                    <td>200 طن</td>
-                    <td>200 طن</td>
-                    <td><strong>400 طن</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>وزن البالة المعبأة</strong></td>
-                    <td>20 كجم</td>
-                    <td>20 كجم</td>
-                    <td>20 كجم</td>
-                </tr>
-                <tr>
-                    <td><strong>عدد البالات الإجمالي/الموسم</strong></td>
-                    <td>10,000 بالة</td>
-                    <td>10,000 بالة</td>
-                    <td><strong>20,000 بالة</strong></td>
-                </tr>
-                <tr>
-                    <td><strong>سعر البالة الواحدة (التقديري)</strong></td>
-                    <td>15 ريالاً</td>
-                    <td>15 ريالاً</td>
-                    <td>15 ريالاً</td>
-                </tr>
-                <tr>
-                    <td><strong>الإيراد الإجمالي/الموسم</strong></td>
-                    <td><strong>150,000 ريال</strong></td>
-                    <td><strong>150,000 ريال</strong></td>
-                    <td><strong>300,000 ريال</strong></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="tab-content reveal" id="subprojects">
-        <div id="subprojects-loader" style="text-align: center; padding: 50px; color: var(--primary-color);">
-            <div style="font-size: 2rem; margin-bottom: 15px;">⏳</div>
-            <p>جاري تحميل بيانات المشاريع الفرعية...</p>
-        </div>
-        <div id="subprojects-content"></div>
-    </div>
-
-    <div class="tab-content reveal" id="videos">
-        <h2>معرض الفيديوهات والصور التوثيقية</h2>
-
-        <div class="summary-box">
-            <h3>توثيق حي للمشروع</h3>
-            <p>يمكنك هنا دمج مقاطع فيديو من يوتيوب لتوثيق مراحل العمل، طبيعة الأرض، أو شروحات إضافية. الفيديوهات أدناه
-                مجرد أمثلة وتعمل بشكل مباشر داخل التقرير.</p>
-        </div>
-
-        <div class="video-grid">
-            <!-- فيديو 1 -->
-            <div class="video-card">
-                <div class="video-container" id="container1">
-                    <!-- استبدل الرابط في src برابط التضمين الخاص بالفيديو المطلوب -->
-                    <iframe id="player1"
-                        src="https://www.youtube.com/embed/Yu7YqgHPKRU?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player1')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">🎥 تشغيل غطاس البئر على بالطاقة الشمسية يوفر تكاليف كبيرة</div>
-            </div>
-
-            <!-- فيديو 2 -->
-            <div class="video-card">
-                <div class="video-container" id="container2">
-                    <iframe id="player2"
-                        src="https://www.youtube.com/embed/SFdeV_CoCMI?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player2')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">💧 مثال 2: اختبار ضخ بئر جوفي</div>
-            </div>
-
-            <!-- فيديو 3 -->
-            <div class="video-card">
-                <div class="video-container" id="container3">
-                    <iframe id="player3"
-                        src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player3')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">📸 فيديو 3: توثيق الموقع (مثال)</div>
-            </div>
-
-            <!-- فيديو 4 -->
-            <div class="video-card">
-                <div class="video-container" id="container4">
-                    <iframe id="player4"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player4')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">🏗️ فيديو 4: تجهيز التربة (مثال)</div>
-            </div>
-
-            <!-- فيديو 5 -->
-            <div class="video-card">
-                <div class="video-container" id="container5">
-                    <iframe id="player5"
-                        src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player5')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">🌿 فيديو 5: مراحل النمو (مثال)</div>
-            </div>
-
-            <!-- فيديو 6 -->
-            <div class="video-card">
-                <div class="video-container" id="container6">
-                    <iframe id="player6"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="video-overlay" onclick="playCurrentVideo('player6')">
-                        <div class="play-icon">▶️</div>
-                        <div class="overlay-text">اضغط مرة أخرى للمشاهدة</div>
-                    </div>
-                </div>
-                <div class="video-title">🚜 فيديو 6: الحصاد والتعبئة (مثال)</div>
+            <div class="table-responsive">
+                <table class="compact-table">
+                    <thead>
+                        <tr>
+                            <th>البند</th>
+                            <th>الموسم الأول</th>
+                            <th>الموسم الثاني</th>
+                            <th>الإجمالي للموسمين</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>عدد الحشات</strong></td>
+                            <td>4 حشات</td>
+                            <td>4 حشات</td>
+                            <td><strong>8 حشات</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>إنتاج الحشة الواحدة</strong></td>
+                            <td>50 طناً</td>
+                            <td>50 طناً</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الإنتاج الموسمي الإجمالي</strong></td>
+                            <td>200 طن</td>
+                            <td>200 طن</td>
+                            <td><strong>400 طن</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>وزن البالة المعبأة</strong></td>
+                            <td>20 كجم</td>
+                            <td>20 كجم</td>
+                            <td>20 كجم</td>
+                        </tr>
+                        <tr>
+                            <td><strong>عدد البالات الإجمالي/الموسم</strong></td>
+                            <td>10,000 بالة</td>
+                            <td>10,000 بالة</td>
+                            <td><strong>20,000 بالة</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>سعر البالة الواحدة (التقديري)</strong></td>
+                            <td>15 ريالاً</td>
+                            <td>15 ريالاً</td>
+                            <td>15 ريالاً</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الإيراد الإجمالي/الموسم</strong></td>
+                            <td><strong>150,000 ريال</strong></td>
+                            <td><strong>150,000 ريال</strong></td>
+                            <td><strong>300,000 ريال</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <!-- معرض الصور -->
-        <div class="image-gallery-section">
-            <h3>📸 معرض الصور التقدمية</h3>
-            <div class="image-grid">
-                <div class="image-card" onclick="openLightbox('images/valley.png', 'إطلالة جوية على منطقة المشروع')">
-                    <img src="images/valley.png" alt="منظر جوي للوادي">
-                    <div class="image-caption">إطلالة جوية على منطقة المشروع</div>
+        <!-- Tab Content: Subprojects -->
+        <div class="tab-content reveal" id="subprojects">
+            <header class="reveal">
+                <h1>مشاريع فرعية للمحمودية</h1>
+                <div class="subtitle">(نخيل مجدول + خط إنتاج صغير + استثمار فائض البئر)</div>
+            </header>
+
+            <!-- Vertical Stack Wrapper -->
+            <div class="vertical-stack-container">
+
+                <!-- المقدمة -->
+                <div id="intro" class="section-card active">
+                    <section>
+                        <h2><i class="fas fa-star"></i> المقدمة: لماذا هذا المشروع مختلف؟</h2>
+                        <p>هذا المشروع لا يعتمد على نشاط واحد، بل على 3 مصادر دخل مترابطة تضمن الاستدامة والنمو المالي:
+                        </p>
+
+                        <div class="indicator-card reveal">
+                            <div class="indicator-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="indicator-content">
+                                <div class="indicator-title">أصل زراعي طويل الأمد</div>
+                                <div>نخيل المجدول كقاعدة إنتاجية ثابتة يتم غرس هذه النخيل على أطراف المحمودية .</div>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card reveal">
+                            <div class="indicator-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="indicator-content">
+                                <div class="indicator-title">خط إنتاج صغير</div>
+                                <div>مضاعفة قيمة المحصول من خلال التعبئة والتدريج عوضاً عن البيع الخام.</div>
+                            </div>
+                        </div>
+
+                        <div class="indicator-card reveal">
+                            <div class="indicator-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="indicator-content">
+                                <div class="indicator-title">استغلال ذكي لفائض البئر</div>
+                                <div>توليد دخل نقدي يومي من مياه الشرب والاستهلاك المحلي.</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-box reveal">
+                            <h3><i class="fas fa-lightbulb"></i> الفلسفة الأساسية</h3>
+                            <p>الفكرة ليست التوسع العشوائي، بل تعظيم الاستفادة القصوى من كل قطرة مياه وكل شبر أرض موجود
+                                بالفعل.</p>
+                        </div>
+                    </section>
                 </div>
-                <div class="image-card" onclick="openLightbox('images/well.png', 'تجهيزات حفر بئر المياه')">
-                    <img src="images/well.png" alt="بئر مياه">
-                    <div class="image-caption">تجهيزات حفر بئر المياه</div>
+
+                <!-- مشروع النخيل -->
+                <div id="palm" class="section-card">
+                    <section>
+                        <h2><i class="fas fa-tree"></i> أولًا: مشروع نخيل المجدول (العمود الفقري)</h2>
+                        <h3>المعطيات الأساسية</h3>
+                        <div class="table-responsive">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>البند</th>
+                                        <th>القيمة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المساحة</td>
+                                        <td>2 هكتار (زراعة أطراف)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عدد النخيل</td>
+                                        <td>112 نخلة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الصنف</td>
+                                        <td>مجدول</td>
+                                    </tr>
+                                    <tr>
+                                        <td>سعر البيع (جملة محافظ)</td>
+                                        <td>5 ريال / كجم</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h3>الإنتاج السنوي المتوقع (سيناريوهات)</h3>
+                        <div class="table-responsive">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>إنتاج النخلة</th>
+                                        <th>إجمالي الإنتاج (طن)</th>
+                                        <th>الإيراد السنوي (ريال) - بيع خام</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>120 كجم</td>
+                                        <td>13.44 طن</td>
+                                        <td>67,200 ريال</td>
+                                    </tr>
+                                    <tr class="highlight-row">
+                                        <td>150 كجم (متوسط)</td>
+                                        <td>16.80 طن</td>
+                                        <td>84,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>220 كجم</td>
+                                        <td>24.64 طن</td>
+                                        <td>123,200 ريال</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
                 </div>
-                <div class="image-card" onclick="openLightbox('images/irrigation.png', 'أنظمة الري الحديثة المنفذة')">
-                    <img src="images/irrigation.png" alt="نظام ري">
-                    <div class="image-caption">أنظمة الري الحديثة المنفذة</div>
+
+                <!-- خط الإنتاج -->
+                <div id="production" class="section-card">
+                    <section>
+                        <h2><i class="fas fa-industry"></i> ثانيًا: خط إنتاج صغير لتمور المجدول</h2>
+                        <div class="highlight reveal">
+                            <p><i class="fas fa-info-circle"></i> ليس مصنعًا ضخماً ولا خطاً صناعيًا معقداً، بل وحدة
+                                معالجة احترافية مصممة خصيصًا لخدمة الـ 112
+                                نخلة بكفاءة عالية.</p>
+                        </div>
+
+                        <h3>وظائف خط الإنتاج</h3>
+                        <div class="production-features">
+                            <div class="feature-item">
+                                <i class="fas fa-sort-amount-down"></i>
+                                <span>فرز يدوي</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-weight"></i>
+                                <span>وزن دقيق</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-box"></i>
+                                <span>تعبئة أنيقة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-thermometer"></i>
+                                <span>إغلاق حراري</span>
+                            </div>
+                        </div>
+
+                        <h3>تكلفة التأسيس (مرة واحدة)</h3>
+                        <div class="table-responsive">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>العنصر</th>
+                                        <th>التكلفة التقريبية (ريال)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>طاولات عمل ستانلس</td>
+                                        <td>1,000 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ميزان رقمي حساس</td>
+                                        <td>200 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ماكينة لحام وإغلاق</td>
+                                        <td>500 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>مواد تعبئة وتغليف</td>
+                                        <td>1,300 ريال</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td><strong>الإجمالي</strong></td>
+                                        <td><strong>≈ 3,000 ريال</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="financial-summary reveal">
+                            <div class="financial-card">
+                                <h4>بيع المحصول خام</h4>
+                                <div class="financial-value">84,000</div>
+                                <p>ريال / سنوياً</p>
+                            </div>
+                            <div class="financial-card green">
+                                <h4>بيع عبر خط الإنتاج</h4>
+                                <div class="financial-value">151,200</div>
+                                <p>ريال / سنوياً (9 ريال/كجم)</p>
+                            </div>
+                        </div>
+
+                        <div class="summary-box reveal">
+                            <p><i class="fas fa-chart-line"></i> <strong>زيادة الإيراد:</strong> +67,200 ريال سنويًا</p>
+                            <p><i class="fas fa-lightbulb"></i> <strong>ملاحظة:</strong> هذه الزيادة مقابل استثمار بسيط
+                                قدره 3,000 ريال فقط!</p>
+                        </div>
+                    </section>
                 </div>
-                <div class="image-card" onclick="openLightbox('images/geology.png', 'التحليل الهيدروجيولوجي للتربة')">
-                    <img src="images/geology.png" alt="دراسة جيولوجية">
-                    <div class="image-caption">التحليل الهيدروجيولوجي للتربة</div>
+
+                <!-- فائض البئر -->
+                <div id="water-surplus" class="section-card">
+                    <section>
+                        <h2><i class="fas fa-tint"></i> ثالثًا: مشروع استثمار فائض البئر (مياه)</h2>
+                        <p>البئر موجود أساساً للري، واستغلال الفائض هو استثمار ذكي لمورد متاح بالفعل.</p>
+
+                        <div class="table-responsive">
+                            <table class="compact-table">
+                                <thead>
+                                    <tr>
+                                        <th>البند</th>
+                                        <th>القيمة التشغيلية</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>كمية البيع اليومية</td>
+                                        <td>20 طن</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عدد الجالونات (20 لتر)</td>
+                                        <td>1,000 جالون</td>
+                                    </tr>
+                                    <tr>
+                                        <td>سعر الجالون</td>
+                                        <td>2 ريال</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="financial-summary reveal">
+                            <div class="financial-card green">
+                                <h4>الإيراد الشهري</h4>
+                                <div class="financial-value">60,000</div>
+                                <p>ريال</p>
+                            </div>
+                            <div class="financial-card blue">
+                                <h4>التكاليف التشغيلية</h4>
+                                <div class="financial-value">18,000</div>
+                                <p>ريال (كهرباء + عمالة + صيانة)</p>
+                            </div>
+                            <div class="financial-card accent">
+                                <h4>صافي الربح الشهري</h4>
+                                <div class="financial-value">42,000</div>
+                                <p>ريال تقريباً</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="image-card" onclick="openLightbox('images/harvest.png', 'مراحل الحصاد والإنتاج الزراعي')">
-                    <img src="images/harvest.png" alt="حصاد">
-                    <div class="image-caption">مراحل الحصاد والإنتاج الزراعي</div>
+
+                <!-- الترابط الذكي -->
+                <div id="synergy" class="section-card">
+                    <section>
+                        <h2><i class="fas fa-link"></i> كيف تخدم المشاريع بعضها؟ (الترابط الذكي)</h2>
+
+                        <div class="highlight reveal">
+                            <h3><i class="fas fa-tint"></i> مشروع المياه:</h3>
+                            <p>يمثل "المحرك النقدي" اليومي، حيث يمول الأسمدة، صيانة شبكة الري، ويغطي أي أعطال طارئة دون
+                                المساس بالمدخرات.</p>
+                        </div>
+
+                        <div class="highlight reveal">
+                            <h3><i class="fas fa-tree"></i> النخيل:</h3>
+                            <p>يمثل "الأصل الاستراتيجي"، إنتاج موسمي مرتفع القيمة يضمن عوائد كبرى عند الحصاد.</p>
+                        </div>
+
+                        <div class="highlight reveal">
+                            <h3><i class="fas fa-industry"></i> خط الإنتاج:</h3>
+                            <p>يمثل "مضاعف الربح"، يرفع قيمة المنتج النهائي من زراعة تقليدية إلى منتج استهلاكي فاخر.</p>
+                        </div>
+
+                        <div class="conclusion reveal">
+                            <h3><i class="fas fa-award"></i> النتيجة النهائية</h3>
+                            <p class="final-result">"مزرعة تموّل نفسها بنفسها، وتنتج عوائد ثابتة ومتنامية."</p>
+                        </div>
+                    </section>
                 </div>
-                <div class="image-card"
-                    onclick="openLightbox('images/taqa.jpg', 'لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً')">
-                    <img src="images/taqa.jpg" alt="تشغيل الغطاس ">
-                    <div class="image-caption"> لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Videos -->
+        <div class="tab-content reveal" id="videos">
+            <h2><i class="fas fa-photo-video"></i> معرض الفيديوهات والصور التوثيقية</h2>
+
+            <div class="summary-box">
+                <h3><i class="fas fa-camera"></i> توثيق حي للمشروع</h3>
+                <p>يمكنك هنا دمج مقاطع فيديو من يوتيوب لتوثيق مراحل العمل، طبيعة الأرض، أو شروحات إضافية. الفيديوهات
+                    أدناه
+                    مجرد أمثلة وتعمل بشكل مباشر داخل التقرير.</p>
+            </div>
+
+            <div class="video-grid">
+                <!-- فيديو 1 -->
+                <div class="video-card">
+                    <div class="video-container" id="container1">
+                        <iframe id="player1"
+                            src="https://www.youtube.com/embed/Yu7YqgHPKRU?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player1')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-solar-panel"></i>
+                        تشغيل غطاس البئر على بالطاقة الشمسية يوفر تكاليف كبيرة
+                    </div>
                 </div>
+
+                <!-- فيديو 2 -->
+                <div class="video-card">
+                    <div class="video-container" id="container2">
+                        <iframe id="player2"
+                            src="https://www.youtube.com/embed/SFdeV_CoCMI?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player2')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-tint"></i>
+                        مثال 2: اختبار ضخ بئر جوفي
+                    </div>
+                </div>
+
+                <!-- فيديو 3 -->
+                <div class="video-card">
+                    <div class="video-container" id="container3">
+                        <iframe id="player3"
+                            src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player3')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-map-marked-alt"></i>
+                        فيديو 3: توثيق الموقع (مثال)
+                    </div>
+                </div>
+
+                <!-- فيديو 4 -->
+                <div class="video-card">
+                    <div class="video-container" id="container4">
+                        <iframe id="player4"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player4')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-tractor"></i>
+                        فيديو 4: تجهيز التربة (مثال)
+                    </div>
+                </div>
+
+                <!-- فيديو 5 -->
+                <div class="video-card">
+                    <div class="video-container" id="container5">
+                        <iframe id="player5"
+                            src="https://www.youtube.com/embed/ScMzIvxBSi4?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player5')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-leaf"></i>
+                        فيديو 5: مراحل النمو (مثال)
+                    </div>
+                </div>
+
+                <!-- فيديو 6 -->
+                <div class="video-card">
+                    <div class="video-container" id="container6">
+                        <iframe id="player6"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&rel=0&modestbranding=1"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="video-overlay" onclick="playCurrentVideo('player6')">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="overlay-text">اضغط للمشاهدة</div>
+                        </div>
+                    </div>
+                    <div class="video-title">
+                        <i class="fas fa-harvest"></i>
+                        فيديو 6: الحصاد والتعبئة (مثال)
+                    </div>
+                </div>
+            </div>
+
+            <!-- معرض الصور -->
+            <div class="image-gallery-section">
+                <h3><i class="fas fa-images"></i> معرض الصور التقدمية</h3>
+                <div class="image-grid">
+                    <div class="image-card"
+                        onclick="openLightbox('images/valley.png', 'إطلالة جوية على منطقة المشروع')">
+                        <img src="images/valley.png" alt="منظر جوي للوادي" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-mountain"></i>
+                            إطلالة جوية على منطقة المشروع
+                        </div>
+                    </div>
+                    <div class="image-card" onclick="openLightbox('images/well.png', 'تجهيزات حفر بئر المياه')">
+                        <img src="images/well.png" alt="بئر مياه" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-water"></i>
+                            تجهيزات حفر بئر المياه
+                        </div>
+                    </div>
+                    <div class="image-card"
+                        onclick="openLightbox('images/irrigation.png', 'أنظمة الري الحديثة المنفذة')">
+                        <img src="images/irrigation.png" alt="نظام ري" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-tint"></i>
+                            أنظمة الري الحديثة المنفذة
+                        </div>
+                    </div>
+                    <div class="image-card"
+                        onclick="openLightbox('images/geology.png', 'التحليل الهيدروجيولوجي للتربة')">
+                        <img src="images/geology.png" alt="دراسة جيولوجية" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-map"></i>
+                            التحليل الهيدروجيولوجي للتربة
+                        </div>
+                    </div>
+                    <div class="image-card"
+                        onclick="openLightbox('images/harvest.png', 'مراحل الحصاد والإنتاج الزراعي')">
+                        <img src="images/harvest.png" alt="حصاد" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-harvest"></i>
+                            مراحل الحصاد والإنتاج الزراعي
+                        </div>
+                    </div>
+                    <div class="image-card"
+                        onclick="openLightbox('images/taqa.jpg', 'لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً')">
+                        <img src="images/taqa.jpg" alt="تشغيل الغطاس" loading="lazy">
+                        <div class="image-caption">
+                            <i class="fas fa-solar-panel"></i>
+                            لوحة طاقة شمسية سهلة التركيب تستخرج الماء من البئر مجاناً
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Content: Summary -->
+        <div class="tab-content reveal" id="summary">
+            <h2><i class="fas fa-chart-bar"></i> الخلاصة النهائية والتكامل بين المشروعين</h2>
+
+            <div class="conclusion keep-together">
+                <h3><i class="fas fa-award"></i> النتيجة الشاملة</h3>
+                <p>بناءً على التحليل الهيدروجيولوجي والدراسة الزراعية، فإن مشروع قطعة <strong>المحمودية</strong> يظهر
+                    إمكانات عالية للنجاح على المستويين:</p>
+            </div>
+
+            <h3><i class="fas fa-check-circle"></i> تقييم احتمالية نجاح حفر البئر</h3>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="indicator-content">
+                    <div class="indicator-title">مؤشرات إيجابية قوية</div>
+                    <p>موقع المحمودية داخل الامتداد الرسوبي الطبيعي للوادي، ووجود خزان جوفي ممتد، والتكوين الأرضي النفاذ
+                        (رمال + حصى) جميعها عوامل تدعم احتمالية عالية لنجاح حفر البئر.</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="indicator-content">
+                    <div class="indicator-title">التوصية الأساسية</div>
+                    <p>ضرورة إجراء مسح جيوفيزيائي قبل الحفر لتحديد نقطة الحفر الدقيقة والعمق المتوقع، مما يزيد من فرص
+                        النجاح ويقلل المخاطر.</p>
+                </div>
+            </div>
+
+            <h3><i class="fas fa-chart-line"></i> الجدوى الاقتصادية للمشروع الزراعي</h3>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="indicator-content">
+                    <div class="indicator-title">الإيرادات المتوقعة</div>
+                    <p>يمكن تحقيق إيرادات تصل إلى <strong>300,000 ريال</strong> خلال سنة و7 أشهر عبر دورة مكثفة للذرة
+                        الرفيعة العلفية (8 حشات، 400 طن إنتاج).</p>
+                </div>
+            </div>
+
+            <div class="indicator-card">
+                <div class="indicator-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="indicator-content">
+                    <div class="indicator-title">التكامل بين المشروعين</div>
+                    <p>توفر المياه الجوفية مصدر ري مستدام يدعم الجدوى الاقتصادية للمشروع الزراعي. نجاح البئر يعني تأمين
+                        مصدر مائي دائم للري، مما يضمن استمرارية الإنتاج الزراعي.</p>
+                </div>
+            </div>
+
+            <div class="highlight keep-together">
+                <h3><i class="fas fa-list-ol"></i> الخطوات التوصية التنفيذية</h3>
+                <ol class="steps-list">
+                    <li>
+                        <strong>المرحلة الأولى:</strong> إجراء المسح الجيوفيزيائي لتحديد نقطة الحفر المثلى.
+                    </li>
+                    <li>
+                        <strong>المرحلة الثانية:</strong> حفر البئر والاختبار لضمان تدفق المياه وجودتها.
+                    </li>
+                    <li>
+                        <strong>المرحلة الثالثة:</strong> تهيئة الأرض للزراعة وبدء الدورة الزراعية حسب الجدول الزمني.
+                    </li>
+                    <li>
+                        <strong>المرحلة الرابعة:</strong> المتابعة الدورية للإنتاج ومراقبة منسوب المياه في البئر.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="recommendation-box keep-together">
+                <h3><i class="fas fa-flag-checkered"></i> الخلاصة النهائية</h3>
+                <p>مشروع قطعة <strong>المحمودية</strong> يمثل فرصة استثمارية متكاملة، حيث تدعم الدراسة الهيدروجيولوجية
+                    احتمالية عالية لنجاح حفر البئر، بينما تظهر الدراسة الزراعية إمكانية تحقيق عوائد اقتصادية مجدية. نجاح
+                    المشروع يعتمد على التنفيذ المنهجي بدءاً بالمسح الجيوفيزيائي، ثم الحفر، ثم تنفيذ الخطة الزراعية.</p>
+                <p class="final-statement">
+                    <i class="fas fa-gem"></i>
+                    حفر البئر هنا خطوة منطقية ومدعومة علمياً... وفرصة كبيرة للحصول على مصدر مائي دائم ودعم الإنتاج
+                    الزراعي المجدي اقتصادياً.
+                </p>
             </div>
         </div>
     </div>
 
     <!-- نافذة عرض الصور المكبرة -->
     <div id="imageModal" class="modal">
-        <span class="close-modal" id="closeModal">إغلاق X</span>
+        <span class="close-modal" id="closeModal">
+            <i class="fas fa-times"></i>
+        </span>
         <img class="modal-content" id="fullImage">
         <div id="caption" class="modal-caption"></div>
     </div>
 
-    <div class="tab-content reveal" id="summary">
-        <h2>الخلاصة النهائية والتكامل بين المشروعين</h2>
-
-        <div class="conclusion keep-together">
-            <h3>النتيجة الشاملة</h3>
-            <p>بناءً على التحليل الهيدروجيولوجي والدراسة الزراعية، فإن مشروع قطعة <strong>المحمودية</strong> يظهر
-                إمكانات عالية للنجاح على المستويين:</p>
-        </div>
-
-        <h3>📊 تقييم احتمالية نجاح حفر البئر</h3>
-
-        <div class="indicator-card">
-            <div class="indicator-icon">✅</div>
-            <div class="indicator-content">
-                <div class="indicator-title">مؤشرات إيجابية قوية</div>
-                <p>موقع المحمودية داخل الامتداد الرسوبي الطبيعي للوادي، ووجود خزان جوفي ممتد، والتكوين الأرضي النفاذ
-                    (رمال + حصى) جميعها عوامل تدعم احتمالية عالية لنجاح حفر البئر.</p>
-            </div>
-        </div>
-
-        <div class="indicator-card">
-            <div class="indicator-icon">💡</div>
-            <div class="indicator-content">
-                <div class="indicator-title">التوصية الأساسية</div>
-                <p>ضرورة إجراء مسح جيوفيزيائي قبل الحفر لتحديد نقطة الحفر الدقيقة والعمق المتوقع، مما يزيد من فرص
-                    النجاح ويقلل المخاطر.</p>
-            </div>
-        </div>
-
-        <h3>📈 الجدوى الاقتصادية للمشروع الزراعي</h3>
-
-        <div class="indicator-card">
-            <div class="indicator-icon">💰</div>
-            <div class="indicator-content">
-                <div class="indicator-title">الإيرادات المتوقعة</div>
-                <p>يمكن تحقيق إيرادات تصل إلى <strong>300,000 ريال</strong> خلال سنة و7 أشهر عبر دورة مكثفة للذرة
-                    الرفيعة العلفية (8 حشات، 400 طن إنتاج).</p>
-            </div>
-        </div>
-
-        <div class="indicator-card">
-            <div class="indicator-icon">🔄</div>
-            <div class="indicator-content">
-                <div class="indicator-title">التكامل بين المشروعين</div>
-                <p>توفر المياه الجوفية مصدر ري مستدام يدعم الجدوى الاقتصادية للمشروع الزراعي. نجاح البئر يعني تأمين
-                    مصدر مائي دائم للري، مما يضمن استمرارية الإنتاج الزراعي.</p>
-            </div>
-        </div>
-
-        <div class="highlight keep-together">
-            <h3>الخطوات التوصية التنفيذية</h3>
-            <ol style="padding-right: 20px; margin-top: 10px;">
-                <li style="margin-bottom: 8px;"><strong>المرحلة الأولى:</strong> إجراء المسح الجيوفيزيائي لتحديد
-                    نقطة الحفر المثلى.</li>
-                <li style="margin-bottom: 8px;"><strong>المرحلة الثانية:</strong> حفر البئر والاختبار لضمان تدفق
-                    المياه وجودتها.</li>
-                <li style="margin-bottom: 8px;"><strong>المرحلة الثالثة:</strong> تهيئة الأرض للزراعة وبدء الدورة
-                    الزراعية حسب الجدول الزمني.</li>
-                <li><strong>المرحلة الرابعة:</strong> المتابعة الدورية للإنتاج ومراقبة منسوب المياه في البئر.</li>
-            </ol>
-        </div>
-
-        <div class="recommendation-box keep-together">
-            <h3>الخلاصة النهائية</h3>
-            <p>مشروع قطعة <strong>المحمودية</strong> يمثل فرصة استثمارية متكاملة، حيث تدعم الدراسة الهيدروجيولوجية
-                احتمالية عالية لنجاح حفر البئر، بينما تظهر الدراسة الزراعية إمكانية تحقيق عوائد اقتصادية مجدية. نجاح
-                المشروع يعتمد على التنفيذ المنهجي بدءاً بالمسح الجيوفيزيائي، ثم الحفر، ثم تنفيذ الخطة الزراعية.</p>
-            <p style="margin-top: 12px; font-weight: bold; color: var(--primary-color);">حفر البئر هنا خطوة منطقية
-                ومدعومة علمياً... وفرصة كبيرة للحصول على مصدر مائي دائم ودعم الإنتاج الزراعي المجدي اقتصادياً.</p>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>تم إعداد هذا التقرير بناءً على: التقرير الاستبشاري الهيدروجيولوجي (15 نوفمبر 2025) ودراسة الجدوى الزراعية
-            والإنتاجية.</p>
-        <p style="margin-top: 10px;">© 2025 - تقرير متكامل لدراسة جدوى مشروع المياه والزراعة</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-leaf"></i>
+                <span>مشروع المحمودية</span>
+            </div>
+            <p>تم إعداد هذا التقرير بناءً على: التقرير الاستبشاري الهيدروجيولوجي (15 نوفمبر 2025) ودراسة الجدوى الزراعية
+                والإنتاجية.</p>
+            <p class="copyright">
+                <i class="far fa-copyright"></i>
+                2025 - تقرير متكامل لدراسة جدوى مشروع المياه والزراعة
+            </p>
+        </div>
     </footer>
-    </div>
 
+    <!-- JavaScript -->
     <script>
-        // تعريف كائن editor مع جميع الوظائف المطلوبة
-
-
         // تحميل YouTube IFrame Player API
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
@@ -629,6 +1051,7 @@
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
         var players = [];
+
         function onYouTubeIframeAPIReady() {
             const iframes = document.querySelectorAll('.video-container iframe');
             iframes.forEach((iframe, index) => {
@@ -644,9 +1067,7 @@
             const playerElement = event.target.getIframe();
             const overlay = playerElement.nextElementSibling;
 
-            // إذا بدأ فيديو بالعمل (حالة التشغيل هي 1)
             if (event.data == YT.PlayerState.PLAYING) {
-                // إخفاء الغطاء الحالي
                 if (overlay) overlay.style.display = 'none';
 
                 // إيقاف جميع الفيديوهات الأخرى
@@ -656,7 +1077,6 @@
                     }
                 });
             } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
-                // إظهار الغطاء عند التوقف أو الانتهاء
                 if (overlay) overlay.style.display = 'flex';
             }
         }
@@ -677,7 +1097,7 @@
             modal.style.display = "block";
             modalImg.src = src;
             captionText.innerHTML = caption;
-            document.body.style.overflow = "hidden"; // منع التمرير في الصفحة الخلفية
+            document.body.style.overflow = "hidden";
         }
 
         document.getElementById("closeModal").onclick = function () {
@@ -712,7 +1132,7 @@
 
         // --- منطق التنقل العائم ---
         const dots = document.querySelectorAll('.nav-dot');
-        const sections = document.querySelectorAll('.tab-content'); // Not directly used for scrolling, but for context
+        const sections = document.querySelectorAll('.tab-content');
 
         dots.forEach(dot => {
             dot.addEventListener('click', function (e) {
@@ -720,11 +1140,9 @@
                 const targetId = this.getAttribute('data-target');
                 const targetTab = document.querySelector(`.tab[data-tab="${targetId}"]`);
 
-                // Simulate click on the main tab to activate it
                 if (targetTab) {
                     targetTab.click();
-                    // Scroll to the top of the container or a specific offset
-                    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top of page
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             });
         });
@@ -744,108 +1162,51 @@
             }
         }
 
-        // Modify the existing DOMContentLoaded listener for tabs
+        // --- Modern Logic for Vertical Layout ---
+        function revealSections() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            reveals.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('revealed');
+                }
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
+            // Initial reveal check
+            revealSections();
+            window.addEventListener('scroll', revealSections);
+
+            // Top-level tabs logic
             const tabs = document.querySelectorAll('.tab');
             const tabContents = document.querySelectorAll('.tab-content');
 
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
-                    // إزالة النشاط من جميع الألسنة والمحتويات
                     tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
 
-                    // إضافة النشاط لللسنة والمحتوى المحدد
                     tab.classList.add('active');
                     const tabId = tab.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
+                    const target = document.getElementById(tabId);
+                    if (target) {
+                        target.classList.add('active');
+                        setTimeout(revealSections, 100);
 
-                    // --- استدعاء المحتوى المنفصل للمشاريع الفرعية ---
-                    if (tabId === 'subprojects') {
-                        const contentDiv = document.getElementById('subprojects-content');
-                        const loader = document.getElementById('subprojects-loader');
-
-                        // تحميل المحتوى فقط إذا لم يتم تحميله من قبل
-                        if (contentDiv.innerHTML === "") {
-                            fetch('mahber.html')
-                                .then(response => response.text())
-                                .then(html => {
-                                    const parser = new DOMParser();
-                                    const doc = parser.parseFromString(html, 'text/html');
-                                    // استخراج المحتوى الموجود داخل الحاوية الرئيسية في الملف الآخر
-                                    const externalContent = doc.querySelector('.container').innerHTML;
-
-                                    // تنظيف المحتوى من الهيدر والفوتر والتبويبات إذا وجدت لتجنب التكرار
-                                    const tempDiv = document.createElement('div');
-                                    tempDiv.innerHTML = externalContent;
-                                    const headerToRemove = tempDiv.querySelector('header');
-                                    // nav preserved
-                                    const footerToRemove = tempDiv.querySelector('footer');
-                                    if (headerToRemove) headerToRemove.remove();
-                                    // nav preserved
-                                    if (footerToRemove) footerToRemove.remove();
-
-                                    // جعل جميع الأقسام مرئية (لأنها في الملف الأصلي مقسمة لتبويبات مخفية)
-                                    // contents hidden for tab logic
-
-                                    contentDiv.innerHTML = tempDiv.innerHTML;
-                                    loader.style.display = "none";
-
-                                    // إعادة تفعيل حركات الظهور للمحتوى الجديد
-                                    
-  // إعادة تفعيل الألسنة للمحتوى الجديد
- const newTabs = contentDiv.querySelectorAll('.tab');
- const newTabContents = contentDiv.querySelectorAll('.tab-content');
- 
- newTabs.forEach(nT => {
-     nT.addEventListener('click', () => {
-         newTabs.forEach(t => t.classList.remove('active'));
-         newTabContents.forEach(c => {
-             c.classList.remove('active');
-             c.style.display = 'none';
-         });
-         nT.classList.add('active');
-         const tId = nT.getAttribute('data-tab');
-         const target = contentDiv.querySelector('#' + tId);
-         if (target) {
-             target.classList.add('active');
-             target.style.display = 'block';
-         }
-     });
- });
- if (typeof revealSections === 'function') revealSections();
-                                })
-                                .catch(error => {
-                                    loader.innerHTML = "<p style='color:red;'>حدث خطأ أثناء تحميل المحتوى. تأكد من وجود ملف mahber.html</p>";
-                                    console.error('Error loading subprojects:', error);
-                                });
-                        }
+                        // Update floating nav
+                        updateActiveDot();
                     }
-
-                    // تحديث النقطة النشطة في الفهرس الجانبي
-                    if (typeof updateActiveDot === 'function') updateActiveDot();
                 });
             });
+
+            // Initialize floating nav
+            updateActiveDot();
         });
     </script>
-
-    
-    
-
-    
-    
-</div>
-
-    
-    
-
-    <style>
-        /* LOCALIZED STABILITY v9.0 */
-        html, body { overflow-x: visible !important; width: 100% !important; }
-        .container, header, footer, section { overflow-x: clip !important; max-width: 100vw !important; }
-        .outer-wrapper { display: contents !important; } /* Neutered if lingering */
-    </style>
-    
 </body>
 
 </html>
