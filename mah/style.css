@@ -48,7 +48,18 @@ body {
     font-size: 17px;
     line-height: 1.7;
     direction: rtl;
+    /* Prevent horizontal shake */
     overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Helper to prevent large elements from breaking layout */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Scrollbar */
@@ -298,44 +309,115 @@ header {
 .table-responsive {
     overflow-x: auto;
     margin: var(--space-4) 0;
-    padding: var(--space-1) 0;
+    padding-bottom: var(--space-2);
+    /* Smooth scroll for mobile */
+    -webkit-overflow-scrolling: touch;
+    /* Constraint to prevent layout blowout */
+    max-width: 100%;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
 }
 
 table.compact-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    /* Changed from collapse to separate for better sticky support */
+    border-spacing: 0;
     font-size: 16px;
     min-width: 600px;
-    border: 1px solid var(--color-border);
+    border: none;
+    /* Borders handled by cells now */
 }
 
 table.compact-table th,
 table.compact-table td {
-    border: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
     padding: var(--space-2) var(--space-3);
     text-align: right;
-    vertical-align: top;
+    vertical-align: middle;
+    background-clip: padding-box;
 }
 
-table.compact-table th {
+/* Remove side borders for cleaner look if desired, or keep for grid */
+table.compact-table th:last-child,
+table.compact-table td:last-child {
+    border-left: none;
+}
+
+/* Sticky Header (Top) */
+table.compact-table thead th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     background: #f9fafb;
-    font-weight: 700;
+    /* Matches var(--color-bg-panel) */
+    font-weight: 800;
     color: var(--color-text);
+    border-bottom: 2px solid var(--color-border-strong);
 }
 
-table.compact-table tr:nth-child(even) {
+/* Sticky First Column (Right side for RTL) */
+table.compact-table th:first-child,
+table.compact-table td:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    z-index: 10;
+    background: var(--color-bg);
+    border-left: 2px solid var(--color-border);
+    /* Stronger divider */
+    font-weight: 700;
+}
+
+/* Super Sticky Corner (Start of Header) */
+table.compact-table thead th:first-child {
+    z-index: 30;
+    background: #f9fafb;
+}
+
+/* Striped Rows - handling sticky background transparency */
+table.compact-table tr:nth-child(even) td {
     background: #fcfcfc;
 }
 
-.total-row {
-    font-weight: 700;
-    background: #f0f9ff;
+table.compact-table tr:nth-child(even) th:first-child,
+table.compact-table tr:nth-child(even) td:first-child {
+    background: #fcfcfc;
 }
 
-.highlight-row {
-    background: var(--color-highlight);
-    font-weight: 600;
+/* Odd Rows Standard Background */
+table.compact-table tr:nth-child(odd) td {
+    background: var(--color-bg);
 }
+
+table.compact-table tr:nth-child(odd) th:first-child,
+table.compact-table tr:nth-child(odd) td:first-child {
+    background: var(--color-bg);
+}
+
+/* Highlight Rows */
+table.compact-table tr.highlight-row td {
+    background: var(--color-highlight) !important;
+    font-weight: 700;
+}
+
+table.compact-table tr.highlight-row td:first-child {
+    background: var(--color-highlight) !important;
+}
+
+/* Total Row */
+.total-row td {
+    background: #f0f9ff !important;
+    font-weight: 800;
+    border-top: 2px solid var(--color-border);
+}
+
+.total-row td:first-child {
+    background: #f0f9ff !important;
+}
+
 
 /* ========== Financial Summary ========== */
 .financial-summary {
