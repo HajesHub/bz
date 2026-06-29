@@ -50,7 +50,7 @@ android.archs = arm64-v8a
 android.entrypoint = org.kivy.android.PythonActivity
 
 # ── إعدادات gradle ────────────────────────────────────
-android.gradle_dependencies =
+# android.gradle_dependencies = 
 
 # السماح بـ Backup لبيانات التطبيق
 android.allow_backup = True
