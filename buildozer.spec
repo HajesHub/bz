@@ -37,17 +37,16 @@ android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 
 # الحد الأدنى لإصدار أندرويد المستهدف (Android 7+)
 android.minapi = 24
-android.api = 34
+android.api = 33
 android.ndk = 25b
 
 # SDK & NDK
 android.accept_sdk_license = True
 
-# Architecture - arm64 is standard for all modern devices and avoids memory crashes
+# Architecture - arm64 is standard for all modern devices
 android.archs = arm64-v8a
 
 # ── وضع النشاط ────────────────────────────────────────
-# p4a يبني النشاط كـ SDLActivity افتراضياً
 android.entrypoint = org.kivy.android.PythonActivity
 
 # ── إعدادات gradle ────────────────────────────────────
@@ -56,12 +55,8 @@ android.gradle_dependencies =
 # السماح بـ Backup لبيانات التطبيق
 android.allow_backup = True
 
-# السماح بالاتصال بخادم localhost للحماية + التسريع العتادي
+# السماح بـ hardware acceleration
 android.manifest.application_attributes = android:usesCleartextTraffic="true" android:hardwareAccelerated="true"
-
-# ضبط لوحة المفاتيح والنافذة (منع الانهيار)
-android.manifest.launch_mode = standard
-android.softinput_mode = adjustResize
 
 # ═══════════════════════════════════════════════════════
 #  Buildozer

@@ -12,38 +12,19 @@ jobs:
 
     steps:
       - name: "📥 Checkout repository"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
-      - name: "☕ Set up Java 17 (Fixes gradlew failed!)"
-        uses: actions/setup-java@v5
+      - name: "🔨 Build with Buildozer (Docker)"
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
         with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: "🔧 Set up Python"
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.11'
-
-      - name: "📦 Install System Dependencies"
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends \
-            git zip unzip autoconf libtool pkg-config \
-            zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 \
-            cmake libffi-dev libssl-dev \
-            build-essential python3-dev
-          pip install --upgrade pip
-          pip install --upgrade "Cython<3" virtualenv buildozer
-
-      - name: "🔨 Build with Buildozer"
-        run: |
-          yes | buildozer android debug
+          workdir: .
+          buildozer_version: stable
 
       - name: "📦 Upload APK Artifact"
         uses: actions/upload-artifact@v4
         with:
           name: AlMahmoudia-App-Debug
-          path: bin/*.apk
+          path: ${{ steps.buildozer.outputs.filename }}
           retention-days: 30
           if-no-files-found: error
