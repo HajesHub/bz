@@ -12,16 +12,16 @@ jobs:
 
     steps:
       - name: "📥 Checkout repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: "☕ Set up Java 17"
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'temurin'
           java-version: '17'
 
       - name: "🔧 Set up Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -34,11 +34,11 @@ jobs:
             cmake libffi-dev libssl-dev \
             build-essential python3-dev
           pip install --upgrade pip
-          pip install --upgrade "Cython<3" virtualenv buildozer
+          pip install --upgrade Cython==0.29.33 virtualenv buildozer
 
       - name: "🔨 Build with Buildozer"
         run: |
-          yes | buildozer android debug
+          buildozer android debug
 
       - name: "📦 Upload APK Artifact"
         uses: actions/upload-artifact@v4
