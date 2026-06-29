@@ -10,7 +10,9 @@ import base64
 import os
 
 # ─── الإعدادات ────────────────────────────────────────────────────
-TOKEN   = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# يُقرأ الـ token من متغير بيئي لأسباب أمنية
+# قم بتعيينه: set GITHUB_TOKEN=ghp_xxxxx  (Windows)
+TOKEN   = os.environ.get("GITHUB_TOKEN", "")
 REPO    = "bz"
 API     = "https://api.github.com"
 HEADERS = {

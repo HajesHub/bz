@@ -1,9 +1,11 @@
 """
 رفع build.yml عبر Git Tree API (يتجاوز قيود workflow scope)
 """
-import urllib.request, urllib.error, json, base64
+import urllib.request, urllib.error, json, base64, os
 
-TOKEN = 'ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# يُقرأ الـ token من متغير بيئي لأسباب أمنية
+# قم بتعيينه: set GITHUB_TOKEN=ghp_xxxxx  (Windows)
+TOKEN = os.environ.get('GITHUB_TOKEN', '')
 OWNER = 'HajesHub'
 REPO  = 'bz'
 API   = 'https://api.github.com'
